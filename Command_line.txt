@@ -1,247 +1,38 @@
 
 
 
-NOTE: The respository must exist on GitHub to commit any changes.
+NOTE: The repository must exist on GitHub before commit any changes
 
 
+1. Prompt to the local GitHub folder.
 
-cd Getting-Started-GitHub
+	->	cd Getting-Started-GitHub
 
+2. Initialize the Project. If it's not created (.git) it will create a new one.
 
-C:\Users\javier.santos\Dropbox\jsantos\Projects\GitHub\Getting-Started-GitHub>gi
-t init
-Reinitialized existing Git repository in C:/Users/javier.santos/Dropbox/jsantos/
-Projects/GitHub/Getting-Started-GitHub/.git/
+	->	git init
 
-C:\Users\javier.santos\Dropbox\jsantos\Projects\GitHub\Getting-Started-GitHub>gi
-t add Markdown_Install.txt
+3. Add/Remove files for the commit.
 
-C:\Users\javier.santos\Dropbox\jsantos\Projects\GitHub\Getting-Started-GitHub>gi
-t commit -m "Add How to install Markdown definition language into Notepad++"
-[master 9069f91] Add How to install Markdown definition language into Notepad++
- 1 file changed, 18 insertions(+)
- create mode 100644 Markdown_Install.txt
+	-> git add Markdown_Install.txt 			 # This will add the specific file.
+	-> git add folder_name/file_name.txt		 # This will add the specific file and create the folder automatically.
+	-> git add .								 # This will add all files contained in current folder/sub-folders.		
 
-C:\Users\javier.santos\Dropbox\jsantos\Projects\GitHub\Getting-Started-GitHub>gi
-t remote add origin https://github.com/jsa4000/Getting-Started-GitHub.git
-fatal: remote origin already exists.
-
-C:\Users\javier.santos\Dropbox\jsantos\Projects\GitHub\Getting-Started-GitHub>gi
-t remote -v
-origin  https://github.com/jsa4000/Getting-Started-GitHub.git (fetch)
-origin  https://github.com/jsa4000/Getting-Started-GitHub.git (push)
-
-C:\Users\javier.santos\Dropbox\jsantos\Projects\GitHub\Getting-Started-GitHub>gi
-t push
-Username for 'https://github.com': jsa4000
-Password for 'https://jsa4000@github.com':
-Counting objects: 3, done.
-Delta compression using up to 4 threads.
-Compressing objects: 100% (3/3), done.
-Writing objects: 100% (3/3), 594 bytes | 0 bytes/s, done.
-Total 3 (delta 1), reused 0 (delta 0)
-remote: Resolving deltas: 100% (1/1), completed with 1 local objects.
-To https://github.com/jsa4000/Getting-Started-GitHub.git
-   e9f5d25..9069f91  master -> master
-
-C:\Users\javier.santos\Dropbox\jsantos\Projects\GitHub\Getting-Started-GitHub>cd
-..
-
-C:\Users\javier.santos\Dropbox\jsantos\Projects\GitHub>cd Training-Courses
-
-C:\Users\javier.santos\Dropbox\jsantos\Projects\GitHub\Training-Courses>git init
-i
-git: 'initi' is not a git command. See 'git --help'.
-
-Did you mean this?
-        init
-
-C:\Users\javier.santos\Dropbox\jsantos\Projects\GitHub\Training-Courses>git init
-
-Initialized empty Git repository in C:/Users/javier.santos/Dropbox/jsantos/Proje
-cts/GitHub/Training-Courses/.git/
-
-C:\Users\javier.santos\Dropbox\jsantos\Projects\GitHub\Training-Courses>git add
-Solutions.txt
-fatal: pathspec 'Solutions.txt' did not match any files
-
-C:\Users\javier.santos\Dropbox\jsantos\Projects\GitHub\Training-Courses>git add
-NNML-Coursera-Training/Solutions.txt
-
-C:\Users\javier.santos\Dropbox\jsantos\Projects\GitHub\Training-Courses>git add
-NNML-Coursera-Training/Overview.txt
-
-C:\Users\javier.santos\Dropbox\jsantos\Projects\GitHub\Training-Courses>git add
-NNML-Coursera-Training/Assignment1/learn_perceptron.m
-warning: LF will be replaced by CRLF in NNML-Coursera-Training/Assignment1/learn
-_perceptron.m.
-The file will have its original line endings in your working directory.
-
-C:\Users\javier.santos\Dropbox\jsantos\Projects\GitHub\Training-Courses>git add
-NNML-Coursera-Training/Assignment1/learn_perceptron.m
-
-C:\Users\javier.santos\Dropbox\jsantos\Projects\GitHub\Training-Courses>git comm
-it -m "Training Course from Coursea about Neural Networks"
-[master (root-commit) ddb5860] Training Course from Coursea about Neural Network
-s
- 3 files changed, 227 insertions(+)
- create mode 100644 NNML-Coursera-Training/Assignment1/learn_perceptron.m
- create mode 100644 NNML-Coursera-Training/Overview.txt
- create mode 100644 NNML-Coursera-Training/Solutions.txt
-
-C:\Users\javier.santos\Dropbox\jsantos\Projects\GitHub\Training-Courses>git remo
-te add origin https://github.com/jsa4000/Training-Courses.git
-
-C:\Users\javier.santos\Dropbox\jsantos\Projects\GitHub\Training-Courses>git remo
-te -v
-origin  https://github.com/jsa4000/Training-Courses.git (fetch)
-origin  https://github.com/jsa4000/Training-Courses.git (push)
-
-C:\Users\javier.santos\Dropbox\jsantos\Projects\GitHub\Training-Courses>git push
-
-fatal: The current branch master has no upstream branch.
-To push the current branch and set the remote as upstream, use
-
-    git push --set-upstream origin master
-
-
-C:\Users\javier.santos\Dropbox\jsantos\Projects\GitHub\Training-Courses>git push
--u origin
-git: 'push-u' is not a git command. See 'git --help'.
-
-C:\Users\javier.santos\Dropbox\jsantos\Projects\GitHub\Training-Courses>git push
- -u origin
-fatal: The current branch master has no upstream branch.
-To push the current branch and set the remote as upstream, use
-
-    git push --set-upstream origin master
-
-
-C:\Users\javier.santos\Dropbox\jsantos\Projects\GitHub\Training-Courses>git push
- -u origin -all
-error: did you mean `--all` (with two dashes ?)
-
-C:\Users\javier.santos\Dropbox\jsantos\Projects\GitHub\Training-Courses>git push
- -u origin --all
-Username for 'https://github.com': jsa4000
-Password for 'https://jsa4000@github.com':
-remote: Repository not found.
-fatal: repository 'https://github.com/jsa4000/Training-Courses.git/' not found
-
-C:\Users\javier.santos\Dropbox\jsantos\Projects\GitHub\Training-Courses>git push
- -u origin master
-Username for 'https://github.com': jsa4000
-Password for 'https://jsa4000@github.com':
-remote: Repository not found.
-fatal: repository 'https://github.com/jsa4000/Training-Courses.git/' not found
-
-C:\Users\javier.santos\Dropbox\jsantos\Projects\GitHub\Training-Courses>git remo
-te set-url origin https://github.com/jsa4000/Training-Courses.git
-
-C:\Users\javier.santos\Dropbox\jsantos\Projects\GitHub\Training-Courses>git add
-.
-warning: LF will be replaced by CRLF in NNML-Coursera-Training/Assignment1/plot_
-perceptron.m.
-The file will have its original line endings in your working directory.
-warning: LF will be replaced by CRLF in NNML-Coursera-Training/Assignment2/READM
-E.txt.
-The file will have its original line endings in your working directory.
-warning: LF will be replaced by CRLF in NNML-Coursera-Training/Assignment2/fprop
-.m.
-The file will have its original line endings in your working directory.
-warning: LF will be replaced by CRLF in NNML-Coursera-Training/Assignment2/sampl
-e_output.txt.
-The file will have its original line endings in your working directory.
-warning: LF will be replaced by CRLF in NNML-Coursera-Training/Assignment2/train
-.m.
-The file will have its original line endings in your working directory.
-
-C:\Users\javier.santos\Dropbox\jsantos\Projects\GitHub\Training-Courses>git comm
-it -m "Training Course from Coursea about Neural Networks"
-[master 66878e4] Training Course from Coursea about Neural Networks
- 26 files changed, 612 insertions(+)
- create mode 100644 NNML-Coursera-Training/A-novel-approach-to-on-line-handwriti
-ng-recognition-based-on-bidirectional-long-short-term-memory-networks.pdf
- create mode 100644 NNML-Coursera-Training/Assignment1/octave-workspace
- create mode 100644 NNML-Coursera-Training/Assignment1/plot_perceptron.m
- create mode 100644 NNML-Coursera-Training/Assignment1/solution.png
- create mode 100644 NNML-Coursera-Training/Assignment2/README.txt
- create mode 100644 NNML-Coursera-Training/Assignment2/assignment2.tar.gz
- create mode 100644 NNML-Coursera-Training/Assignment2/fprop.m
- create mode 100644 NNML-Coursera-Training/Assignment2/sample_output.txt
- create mode 100644 NNML-Coursera-Training/Assignment2/train.m
- create mode 100644 NNML-Coursera-Training/Convolutional-networks-for-images_-sp
-eech_-and-time-series.pdf
- create mode 100644 NNML-Coursera-Training/Generating-Text-with-Recurrent-Neural
--Networks.pdf
- create mode 100644 NNML-Coursera-Training/Gradient-based-learning-applied-to-do
-cument-recognition.pdf
- create mode 100644 NNML-Coursera-Training/Learning-representations-by-back-prop
-agating-errors.pdf
- create mode 100644 NNML-Coursera-Training/Neural-probabilisic-language-models.p
-df
- create mode 100644 NNML-Coursera-Training/Optimizing-Gradient-Descent_Arxiv-160
-9-04747.pdf
- create mode 100644 NNML-Coursera-Training/Optimizing_Techniques - Gradient_Desc
-ent.docx
- create mode 100644 NNML-Coursera-Training/TestsSheet.xlsx
- create mode 100644 NNML-Coursera-Training/_623672a1cc56171910a93439cd2bba8b_tur
-ian.png
- create mode 100644 NNML-Coursera-Training/lec1.pdf
- create mode 100644 NNML-Coursera-Training/lec2.pdf
- create mode 100644 NNML-Coursera-Training/lec3.pdf
- create mode 100644 NNML-Coursera-Training/lec4.pdf
- create mode 100644 NNML-Coursera-Training/lec5.pdf
- create mode 100644 NNML-Coursera-Training/lec6.pdf
- create mode 100644 NNML-Coursera-Training/lec7.pdf
- create mode 100644 NNML-Coursera-Training/lec8.pdf
-
-C:\Users\javier.santos\Dropbox\jsantos\Projects\GitHub\Training-Courses>git push
- origin master --force
-Username for 'https://github.com': jsa4000
-Password for 'https://jsa4000@github.com':
-remote: Repository not found.
-fatal: repository 'https://github.com/jsa4000/Training-Courses.git/' not found
-
-C:\Users\javier.santos\Dropbox\jsantos\Projects\GitHub\Training-Courses>git remo
-te set-url origin https://github.com/jsa4000/Training-Courses.git
-
-C:\Users\javier.santos\Dropbox\jsantos\Projects\GitHub\Training-Courses>git push
- -u origin master
-Username for 'https://github.com': jsa4000
-Password for 'https://jsa4000@github.com':
-To https://github.com/jsa4000/Training-Courses.git
- ! [rejected]        master -> master (fetch first)
-error: failed to push some refs to 'https://github.com/jsa4000/Training-Courses.
-git'
-hint: Updates were rejected because the remote contains work that you do
-hint: not have locally. This is usually caused by another repository pushing
-hint: to the same ref. You may want to first integrate the remote changes
-hint: (e.g., 'git pull ...') before pushing again.
-hint: See the 'Note about fast-forwards' in 'git push --help' for details.
-
-C:\Users\javier.santos\Dropbox\jsantos\Projects\GitHub\Training-Courses>git push
- -u origin master --force
-Username for 'https://github.com': jsa4000
-Password for 'https://jsa4000@github.com':
-Counting objects: 38, done.
-Delta compression using up to 4 threads.
-Compressing objects: 100% (34/34), done.
-Writing objects:  55% (21/38), 7.42 MiB | 132.00 KiB/s
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+5. Commit the files added/removed/modified etc..
+	
+	-> git commit -m "Message for the Commit" 	# Github will automatically check for the changes committed. Unmodified files will be omitted.
+	
+6. Add the origin if the project has been created.
+	
+	-> git remote add origin https://github.com/jsa4000/Getting-Started-GitHub.git
+	-> git remote -v  # See the status
+	
+7. Finalizse the process. 
+	
+	-> git push
+	-> git push -u origin -force #Force the upload
+	
+	Put User and password
 
 
 
