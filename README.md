@@ -1,11 +1,11 @@
 #  Getting Started in GitHub
 
-0. ##OVERVIEW.
+##0. OVERVIEW.
 
 	In the next chapters I'm going to go through basic **Workflows** currently used in Computer Science.
 	Current workflows are going to be based in **Git** and **Github** for source-code and web hosting repository.
  
-1. ##HISTORY. (Git vs GitHub)
+##1. HISTORY. (Git vs GitHub)
 
 	This is a topic that people often confuse a lot. I'm talking about the main differences between Git and GitHub since both words are totally different from each other.
 	
@@ -26,7 +26,7 @@
 		Github provides access control and several collaboration features such as wikis, task management, and bug tracking and feature requests for every project.
 	
 		
-2. ##INSTALLING GIT
+##2. INSTALLING GIT
 
 	2.2 ###Installing on Linux
 
@@ -58,7 +58,7 @@
 			"rundll32 sysdm.cpl,EditEnvironmentVariables"
 		
 
-3. ##CONFIGURING THE PROJECT
+##3. CONFIGURING THE PROJECT
 
 	In order to configure your Git repository you have several choices.
 	
@@ -76,25 +76,25 @@
 	
 
 
-3. ##GIT CONTEXT STAGE AREA vs REPOSITORY AREA
+##3. GIT CONTEXT STAGE AREA vs REPOSITORY AREA
 
 
-4. ##UDATE THE CONTENT FROM THE SERVER
+##4. UDATE THE CONTENT FROM THE SERVER
 
 
-5. ##COMMIT CHANGES
+##5. COMMIT CHANGES
 
 
 
-6. ##BRANCHES FROM REPOSITORY
+##6. BRANCHES FROM REPOSITORY
 
 
-7. ##PULL REQUEST
+##7. PULL REQUEST
 
-8. ##MERGE COMMITED CHANGES
-
-
-9. ##BASIC WORKFLOW
+##8. MERGE COMMITED CHANGES
 
 
-10. ##FAQ
+##9. BASIC WORKFLOW
+
+
+##10. FAQ
