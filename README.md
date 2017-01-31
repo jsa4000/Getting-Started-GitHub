@@ -13,9 +13,8 @@ First at all, we are going to talk about the main differences between Git and Gi
 
 >"Git is a free and **open source distributed version control system** designed to handle everything from small to very large projects with speed and efficiency"
 	
-Git is a distributed peer-peer version control system. Each node in the network is a peer, storing entire repositories which can also act as a multi-node distributed back-ups. There is no specific concept of a central server although nodes can be head-less or 'bare', taking on a role similar to the central server in centralised version control systems.
-		
-Git works as a **local repository**. However, it acts as **Back-up** for distributed repository version control system.
+Git is a distributed peer-peer version control system. Each node in the network is a **peer**, storing entire repositories which can also act as a multi-node distributed **back-ups**. There is no specific concept of a central server although nodes can be head-less or 'bare', taking on a role similar to the central server in centralised version control systems.
+
 	
 ###2.2. GitHub.
 			
@@ -23,7 +22,7 @@ Git works as a **local repository**. However, it acts as **Back-up** for distrib
 	
 ##3. Git Explained	
 	
->*NOTE:* Following explanation has been extracted from the following link: "https://juristr.com/blog/2013/04/git-explained/"	
+>*NOTE:* Following explanation has been extracted from the following link: https://juristr.com/blog/2013/04/git-explained/
 	
 How is Git different from other VCS (Version Control Systems)? Probably the most obvious difference is that Git is distributed (unlike SVN or TFS for instance). This means, you’ll have a local repository which lives inside a special folder named .git and you’ll normally (but not necessarily) have a remote, central repository where different collaborators may contribute their code. Note that each of those contributors has an exact clone of the repository on their local workstation.
 
