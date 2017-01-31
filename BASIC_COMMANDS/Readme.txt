@@ -2,6 +2,8 @@
 ** GETTING STARTED GITHUB  **
 *****************************
 
+Link to Basic Commands: https://es.atlassian.com/git/tutorials/svn-to-git-prepping-your-team-migration
+
 The idea is to show how to install Github in a windows machine and Getting Started.
 
 This includes:
