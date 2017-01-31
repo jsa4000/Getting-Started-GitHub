@@ -2,8 +2,7 @@
 
 ##1. Overview
 
-This repository is intended to go through different **Workflows** and **Technologies** currently used for Control Version Systems.
-The system is going to be **Git**. Aslo, we will be using **Github** for Git remote repository.
+This repository is intended to go through different **Workflows** and **Tips** working with Git. Aslo, we will be using **Github** for Git remote repository.
  
 ##2. Differences between Git and GitHub
 
