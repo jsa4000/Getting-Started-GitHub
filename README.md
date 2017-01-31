@@ -11,26 +11,26 @@ First at all, we are going to talk about the main differences between Git and Gi
 	
 ###2.1. Git.
 
-	"Git is a free and **open source distributed version control system** designed to handle everything from small to very large projects with speed and efficiency"
+>"Git is a free and **open source distributed version control system** designed to handle everything from small to very large projects with speed and efficiency"
 	
 Git is a distributed peer-peer version control system. Each node in the network is a peer, storing entire repositories which can also act as a multi-node distributed back-ups. There is no specific concept of a central server although nodes can be head-less or 'bare', taking on a role similar to the central server in centralised version control systems.
 		
 Git works as a **local repository**. However, it acts as **Back-up** for distributed repository version control system.
 	
 ###2.2. GitHub.
-		
-	"GitHub is a **web-based Git repository hosting service**, which offers all of the distributed revision control and source code management (SCM) functionality of Git as well as adding its own features."
-
-Github provides access control and several collaboration features such as wikis, task management, and bug tracking and feature requests for every project.
+			
+>"Github provides access control and several collaboration features such as wikis, task management, and bug tracking and feature requests for every project.
 	
 ##3. Git Explained	
 	
-	NOTE: Following explanation has been extracted from the following link: "https://juristr.com/blog/2013/04/git-explained/"	
+>*NOTE:* Following explanation has been extracted from the following link: "https://juristr.com/blog/2013/04/git-explained/"	
 	
 How is Git different from other VCS (Version Control Systems)? Probably the most obvious difference is that Git is distributed (unlike SVN or TFS for instance). This means, you’ll have a local repository which lives inside a special folder named .git and you’ll normally (but not necessarily) have a remote, central repository where different collaborators may contribute their code. Note that each of those contributors has an exact clone of the repository on their local workstation.
 
 Git itself can be imagined as something that sits on top of your file system and manipulates files. Even better, you can imagine Git as a tree structure where each commit creates a new node in that tree. Nearly all Git commands actually serve to navigate on this tree and to manipulate it accordingly.
 Git repository should be seen from the point of view of the tree it constructs. 
+
+![alt text](http://git-scm.com/figures/18333fig0106-tn.png "Git Local Workflow")
 
 ##4. Terminology
 
