@@ -134,7 +134,6 @@ In order to do a Fork, you need some more additional steps:
 4. Add new remote repository called upstream
 	git remote add upstream https://github.com/octocat/Spoon-Knife.git
 
-
 The idea behind this operation is that you can fetch and push the changes into both remote repositories.
 	Ej. git push origin master -> This will push the local master into your origin remote respoitory
 		git fetch upstream master -> This will update (also pull) your local master branch with the upstream master copy of the remote repository
@@ -154,8 +153,6 @@ The basic Git workflow goes something like this:
 - You do a commit, which takes the files as they are in the staging area and stores that snapshot permanently to your Git directory.
 
 If a particular version of a file is in the Git directory, it’s considered committed. If it has been modified and was added to the staging area, it is staged. And if it was changed since it was checked out but has not been staged, it is modified. In Git Basics, you’ll learn more about these states and how you can either take advantage of them or skip the staged part entirely.
-
-
 
 ##4. UDATE THE CONTENT FROM THE SERVER (PULL vs FETCH)
 
