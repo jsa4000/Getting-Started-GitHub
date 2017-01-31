@@ -45,7 +45,7 @@ In order to set your user-name and email account you need to use the following c
 	git config --global user.name "user-name"
 	git config --global user.email user-email@example.com
 
-The settings are stored in .gitconfig the current user folder, "\users\username\". This file looks like this:
+The settings are stored in a file .gitconfig, that it's located in the current user folder, "\users\username\". This file looks like this:
 
 	[user]
 		name = user.name
@@ -61,7 +61,7 @@ To list all the variables already configured, you can use the following command:
 
 	git config --list
 
-You can also configure the tool that will be used to see the differences between files and do the merges manually.
+You can also configure an additional tool that will be launched to compare files. This is used to check the differences and do merges manually.
 
 	[mergetool]
 		prompt = false
@@ -84,11 +84,11 @@ You can also configure the tool that will be used to see the differences between
 		trustExitCode = true
 		cmd = "/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe" -u -e $LOCAL $REMOTE 
 	
-#2.Configuring the Repositery
+##2.Configuring the Repositery
 
 In order to configure your Git repository you have several choices.
 
-##2.1 Create a New Repository
+###2.1 Create a New Repository
 
 In order to create a new repository, the main workflow is the following:
 		
@@ -105,7 +105,7 @@ In order to create a new repository, the main workflow will be:
 - First create a local repository in the local machine , adding all the structure and necessary files.
 - Create some constraints (.gitignore) and initial files remote repository, in this case a GitHub origin.
 
-##2.2 Clone an Existing repository
+###2.2 Clone an Existing repository
 
 This is the common way to proceed in most of the cases and projects.
 
@@ -129,7 +129,7 @@ This will create a new directory inside the current folder with the name of the 
 You can get the information of the remote address by typing the following command:
 	git remote -v          (-v or --verbose)
 	
-##2.3 Fork and Clone an Existing repository
+###2.3 Fork and Clone an Existing repository
 
 This Fork operation doesn't exist in Git. This is an extension of Git that Github has taken into consideration.
 

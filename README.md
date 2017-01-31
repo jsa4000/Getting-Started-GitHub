@@ -1,22 +1,22 @@
 #  Getting Started into GitHub
 
-##1. Overview.
+##1. Overview
 
 This repository is intended to go through different **Workflows** and **Technologies** currently used for Control Version Systems.
 The system is going to be **Git**. Aslo, we will be using **Github** for Git remote repository.
  
-##2. Differences between Git and GitHub,
+##2. Differences between Git and GitHub
 
 First at all, we are going to talk about the main differences between Git and GitHub, since both are misunderstood for some people.
 	
-###2.1. Git.
+###2.1. Git
 
 >"Git is a free and **open source distributed version control system** designed to handle everything from small to very large projects with speed and efficiency"
 	
 Git is a distributed peer-peer version control system. Each node in the network is a **peer**, storing entire repositories which can also act as a multi-node distributed **back-ups**. There is no specific concept of a central server although nodes can be head-less or 'bare', taking on a role similar to the central server in centralised version control systems.
 
 	
-###2.2. GitHub.
+###2.2. GitHub
 			
 >"Github provides access control and several collaboration features such as wikis, task management, and bug tracking and feature requests for every project.
 	
