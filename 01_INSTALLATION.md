@@ -2,9 +2,8 @@
 
 ##1. Installing Git
 
-Depending on the Operative System do you have: Linux, Microsoft Windows or MacOS you will need to use different setup to correctly install Git into the machine.
-Also ,Git provide two ways of managing the repositories. One is by using command line (bash or standard cmd on windows) and the other us by using a tool with UI
-that allows the same operations that using commands. However some functionality in the UI are omitted to simplify the work, this mean you can get lost very quickly if
+Depending on the Operative System do you use: Linux, Microsoft Windows or MacOS you will need to use a different setup to correctly install Git into the machine.
+Also, Git provides two ways of managing the repositories. One is by using command line (by using standard Unix bash or standard cmd on windows) and the other us by using a tool with a graphical interface. However some functionality in the UI are omitted to simplify the work, this mean you can get lost very quickly if
 some error happens.
 
 From GitHub you can also manage the repositories. However, this is more tedious to maintain and slow. 
