@@ -1,15 +1,15 @@
-#  Getting Started in GitHub
+#  Getting Started into GitHub
 
-#0. OVERVIEW.
+##1. Overview.
 
-In the next chapters I'm going to go through basic **Workflows** currently used in Computer Science.
-Current workflows are going to be based in **Git** and **Github** for source-code and web hosting repository.
+This repository is intended to go through different **Workflows** and **Technologies** currently used for Control Version Systems.
+The control system is going to be **Git**. Aslo, we will be using **Github** for Git remote repository.
  
-#1. HISTORY. (Git vs GitHub)
+##2. Differences between Git and GitHub,
 
-This is a topic that people often confuse a lot. I'm talking about the main differences between Git and GitHub since both words are totally different from each other.
+First at all, we are going to talk about the main differences between Git and GitHub, since thet are misunderstood sometimes.
 	
-##1.1 Git 
+###2.1. Git.
 
 "Git is a free and **open source distributed version control system** designed to handle everything from small to very large projects with speed and efficiency"
 	
@@ -17,139 +17,32 @@ Git is a distributed peer-peer version control system. Each node in the network 
 		
 Git works as a **local repository**. However, it acts as **Back-up** for distributed repository version control system.
 	
-##1.2 GitHub
+###2.2. GitHub.
 		
 "GitHub is a **web-based Git repository hosting service**, which offers all of the distributed revision control and source code management (SCM) functionality of Git as well as adding its own features."
 
 Github provides access control and several collaboration features such as wikis, task management, and bug tracking and feature requests for every project.
 	
-#2. INSTALLING GIT
-
-Depending on the Operative System do you have: Linux, Microsoft Windows or MacOS you will need to use different setup to correctly install Git into the machine.
-Also ,Git provide two ways of managing the repositories. One is by using command line (bash or standard cmd on windows) and the other us by using a tool with UI
-that allows the same operations that using commands. However some functionality in the UI are omitted to simplify the work, this mean you can get lost very quickly if
-some error happens.
-
-From GitHub you can also manage the repositories. However, this is more tedious to maintain and slow. 
-GitHub is very good for some other tasks like: watch the contents, read files, creating new remote repositories, performing Merges for the received Pull-Request, etc...
-
-##2.1 Installing on Linux
-
-If you want to install the basic Git tools on Linux via a binary installer, you can generally do so through the basic package-management tool that comes with your distribution. If you’re on Fedora for example, you can use yum:
-
-	$ sudo yum install git-all
-
-If you’re on a Debian-based distribution like Ubuntu, try apt-get:
-
-	$ sudo apt-get install git-all
-
-For more options, there are instructions for installing on several different Unix flavors on the Git website, at http://git-scm.com/download/linux.
-
-
-##2.2 Installing on Windows
-
-There are also a few ways to install Git on Windows. The most official build is available for download on the Git website. Just go to http://git-scm.com/download/win and the download will start automatically. Note that this is a project called Git for Windows, which is separate from Git itself; for more information on it, go to https://git-for-windows.github.io/.
-
-To get an automated installation you can use the Git Chocolatey package. Note that the Chocolatey package is community maintained.
-
-Another easy way to get Git installed is by installing GitHub for Windows. The installer includes a command line version of Git as well as the GUI. It also works well with Powershell, and sets up solid credential caching and sane CRLF settings. We’ll learn more about those things a little later, but suffice it to say they’re things you want. You can download this from the GitHub for Windows website, at http://windows.github.com.
-
-The installation of Github on Windows requires a Global variable to access to the main "git.exe" executable globally. In order to do this it's necessary to add the Path of the current executable versión of Git. In my case it was:
-		
-	"C:\Program Files\Github\mingw64\bin"
-			
-To access from Comman line to the main control panel on windows (without Admin privileges) :
-		
-	"rundll32 sysdm.cpl,EditEnvironmentVariables"
-
-##2.3 Global Configuration 		
+##3. Git Explained	
 	
-Git has no configuration by default (vanilla settings). To be able to start creating new repositories, commit changes, etc it's necessary to configure some global variables.
-In order to set your user-name and email account you need to use the following commands:
+*NOTE: Following explanation has been extracted from the following link: https://juristr.com/blog/2013/04/git-explained/	*
 	
-git config --global user.name "user-name"
-git config --global user.email user-email@example.com
+How is Git different from other VCS (Version Control Systems)? Probably the most obvious difference is that Git is distributed (unlike SVN or TFS for instance). This means, you’ll have a local repository which lives inside a special folder named .git and you’ll normally (but not necessarily) have a remote, central repository where different collaborators may contribute their code. Note that each of those contributors has an exact clone of the repository on their local workstation.
 
-The settings are stored in .gitconfig the current user folder, "\users\username\". This file looks like this:
+Git itself can be imagined as something that sits on top of your file system and manipulates files. Even better, you can imagine Git as a tree structure where each commit creates a new node in that tree. Nearly all Git commands actually serve to navigate on this tree and to manipulate it accordingly.
+Git repository should be seen from the point of view of the tree it constructs. 
 
-	[user]
-		name = user.name
-	[user]
-		email = user.name@example.com
-	[filter "lfs"]
-		clean = git-lfs clean -- %f
-		smudge = git-lfs smudge -- %f
-		required = true
+##4. Terminology
 
-
-To list all the variables already configured, you can use the following command:
-
-git config --list
-
-You can also configure the tool that will be used to see the differences between files and do the merges manually.
-
-	[mergetool]
-		prompt = false
-		keepBackup = false
-		keepTemporaries = false
-
-	[merge]
-		tool = winmerge
-
-	[mergetool "winmerge"]
-		name = WinMerge
-		trustExitCode = true
-		cmd = "/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe" -u -e -dl \"Local\" -dr \"Remote\" $LOCAL $REMOTE $MERGED
-
-	[diff]
-		tool = winmerge
-
-	[difftool "winmerge"]
-		name = WinMerge
-		trustExitCode = true
-		cmd = "/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe" -u -e $LOCAL $REMOTE 
-
-	
-	
-	
-#3. CONFIGURING THE REPOSITORY
-
-##3.1 Create a New Repository	
-##3.2 Clone an Existing repository
-##3.3 Fork and Clone an Existing repository
-
-#4. GIT CONTEXT. WORKING AREA vs STAGE AREA vs COMMITED AREA
-
-#5. UDATE THE CONTENT FROM THE SERVER (PULL vs FETCH)
-	
-#6. COMMIT CHANGES
-
-#7. FIXING MISTAKES AND UNDOING BAD COMMITS
-
-##7.1 Undo a File from current change.
-##7.2 Modify the comment of the previous commit without alter the history. 
-##7.3 Change committed files from the previous commit without create a new one.
-##7.4 Reset the repository to a Commit point.
-##7.5 Clean modified files or untracked files from Commit.
-##7.6 Recover deleted branch or Commit from historical reference log.
-##7.7 Revert changes to a point with historical.
-##7.8 Cherry-Picking specific commits from another branch to the current.
-##7.9 Differences between Git Revert, Checkout and Reset.
-
-#8. BRANCHES FROM REPOSITORY
-
-#9. PULL REQUEST
-
-#10. MERGE COMMITED CHANGES
-
-#11. BASIC WORKFLOW
-
-#12. FAQ
-
-##12.1 Differences between Git add ., git add -A,git -u /A, git add *
-
-
-
+- master: the repository’s main branch. Depending on the work flow it is the one people work on or the one where the integration happens
+- clone: copies an existing git repository, normally from some remote location to your local environment.
+- commit: submitting files to the repository (the local one); in other VCS it is often referred to as “checkin”
+- fetch or pull: is like “update” or “get latest” in other VCS. The difference between fetch and pull is that pull combines both, fetching the latest code from a remote repo as well as performs the merging.
+- push: is used to submit the code to a remote repository
+- remote: these are “remote” locations of your repository, normally on some central server.
+- SHA: every commit or node in the Git tree is identified by a unique SHA key. You can use them in various commands in order to manipulate a specific node.
+- head: is a reference to the node to which our working space of the repository currently points.
+- branch:is just like in other VCS with the difference that a branch in Git is actually nothing more special than a particular label on a given node. It is not a physical copy of the files as in other popular VCS.
 
 
 
