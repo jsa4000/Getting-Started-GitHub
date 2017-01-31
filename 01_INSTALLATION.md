@@ -142,16 +142,14 @@ copy and the upstream is the original repository of your fork. This is done to r
 
 In order to do a Fork, you need some more additional steps:
 		
->1. First, perform a Fork operation suing GitHub to copy the repository into your account.
->2. Clone the Fork into your local machine by doing a Clone.
-```
-	git clone https://github.com/YOUR-USERNAME/Spoon-Knife
-```
->3. Press "git remote -v "to see the current configuration for the remote location (fetch and push)
->4. Add new remote repository called upstream
-```
-	git remote add upstream https://github.com/octocat/Spoon-Knife.git
-```
+>- First, perform a Fork operation suing GitHub to copy the repository into your account.
+>- Clone the Fork into your local machine by doing a Clone.
+
+    	git clone https://github.com/YOUR-USERNAME/Spoon-Knife
+>- Press "git remote -v "to see the current configuration for the remote location (fetch and push)
+>- Add new remote repository called upstream
+
+    	git remote add upstream https://github.com/octocat/Spoon-Knife.git
 
 The idea behind this operation is that you can fetch and push the changes into both remote repositories.
 > This will push the local master into your origin remote respoitory
