@@ -200,6 +200,24 @@ Depending on the case you would need different commands and actions:
 In order to get back to and old version of a file that have been modified: git checkout your_file
 This action will undo the changes of that file.
 
+2. Modify the comment of the previous commit without alter the history. 
+
+This case is to modify the previous commit done. Note that the Hash of the commit will also change after this operation.
+ In order to do tha the command is the following:
+
+git commit --amend -m "Override the previous comment"
+
+3. Change committed files from the previous commit without create a new one.
+
+git add .
+git commit --amend
+
+Git will prompt the committed changes and the previous comment, so it can be modified if needed.
+
+4.
+
+
+
 
 
 
