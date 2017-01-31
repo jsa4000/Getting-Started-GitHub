@@ -141,6 +141,20 @@ The idea behind this operation is that you can fetch and push the changes into b
 
 ##3. GIT CONTEXT STAGE AREA vs REPOSITORY AREA
 
+The Git directory is where Git stores the metadata and object database for your project. This is the most important part of Git, and it is what is copied when you clone a repository from another computer.
+
+The working tree is a single checkout of one version of the project. These files are pulled out of the compressed database in the Git directory and placed on disk for you to use or modify.
+
+The staging area is a file, generally contained in your Git directory, that stores information about what will go into your next commit. It’s sometimes referred to as the “index”, but it’s also common to refer to it as the staging area.
+
+The basic Git workflow goes something like this:
+
+- You modify files in your working tree.
+- You stage the files, adding snapshots of them to your staging area.
+- You do a commit, which takes the files as they are in the staging area and stores that snapshot permanently to your Git directory.
+
+If a particular version of a file is in the Git directory, it’s considered committed. If it has been modified and was added to the staging area, it is staged. And if it was changed since it was checked out but has not been staged, it is modified. In Git Basics, you’ll learn more about these states and how you can either take advantage of them or skip the staged part entirely.
+
 
 
 ##4. UDATE THE CONTENT FROM THE SERVER (PULL vs FETCH)
@@ -176,11 +190,14 @@ In the simplest terms, git pull does a git fetch followed by a git merge. Fetch 
 	
 		git pull --rebase
 
+		
+git checkout -b iss53		
+		
 ##5. COMMIT CHANGES
 
 
 
-##5.1 FIXING MISTAKES AND UNDOING BAD COMMITS
+##6. FIXING MISTAKES AND UNDOING BAD COMMITS
 
 NOTE: A very good tutorial on youtube with the same materials is https://www.youtube.com/watch?v=FdZecVxzJbk
 	  Also this link could be a very good lecture for this topic: https://davidzych.com/difference-between-git-reset-soft-mixed-and-hard/
@@ -200,19 +217,19 @@ For this section there are some basic commands you need to know:
 	
 Depending on the case you would need different commands and actions:
 
-###1. Undo a File
+###6.1. Undo a File
 
 In order to get back to and old version of a file that have been modified: git checkout your_file
 This action will undo the changes of that file.
 
-###2. Modify the comment of the previous commit without alter the history. 
+###6.2. Modify the comment of the previous commit without alter the history. 
 
 This case is to modify the previous commit done. Note that the Hash of the commit will also change after this operation.
  In order to do tha the command is the following:
 
 git commit --amend -m "Override the previous comment"
 
-###3. Change committed files from the previous commit without create a new one.
+###6.3. Change committed files from the previous commit without create a new one.
 
 git add .
 git commit --amend
@@ -220,7 +237,7 @@ git commit --amend
 Git will prompt the committed changes and the previous comment, so it can be modified if needed.
 Type ":wq" to write and quit. This is a command from vi.
 
-###4. Reset the repository to a Commit point 
+###6.4. Reset the repository to a Commit point 
 
 This is used when you want to revert the repository to a certain commit. (Similar to a Restore point)
 The hash of the commit is needed to perform this operation.
@@ -238,14 +255,14 @@ Where commit-hash is the first (eight for example) numbers of the commit (e.j. d
 The differences between those parameters depend on the status of the current reset regarding the staged files.
 In some cases you want to reset totally to a commit branch (hard), or sometimes you need to add some more files or do some modification after do the commit again. 
 
-###5. Clean staged or untracked files
+###6.5. Clean staged or untracked files
 
 When you use "git status", you are going to see all the files untracked or changed for the future commit.
 Some times you need to remove these files from the commit. For example you have added some files, but you don't neccesay needed them for this commit. 
 The command to clean these changes is:
 git clean -df
 
-###6. Recover deleted branch or Commit
+###6.6. Recover deleted branch or Commit
 
 This is used when you want to recover a bracnh that has been totally delete from the log (hoistorial of commits)
 To see all the logs (not only the commited or the valid ones) you have to use the following command:
@@ -258,14 +275,33 @@ However your branch keep with the same temporary number. So you need to create a
 "git branch backup"
 At this stage you will have a new branch with the recovered branch.
 
-###7. Revert 
+###6.7. Revert changes to a point with historical
 
 Revert will do the same as reset how ever this will maintain the log. So the log will remain and this will act a new commit.
 In order to revert to a current committed point you should need the hash
 git revert commit-hash
 
 
-###8. Differences between Git Revert, Checkout and Reset
+###6.8. Cherry-Picking specific commits from another branch
+
+NOTE: For further explanation you could read the following link:  https://ariejan.net/2010/06/10/cherry-picking-specific-commits-from-another-branch/
+
+Cherry picking in git means to choose a commit from one branch and apply it onto another.
+This is in contrast with other ways such as merge and rebase which normally applies many commits onto a another branch.
+
+dd2e86 - 946992 - 9143a9 - a6fd86 - 5a6057 [master]
+           \
+            76cada - 62ecb3 - b886a0 [feature]
+	
+1. Checkout the master Branch and apply the commit "62ecb3" of the branch [feature]
+git checkout master
+git cherry-pick 62ecb3
+
+2. You could also copy the entire log history from 76cada - 62ecb3 to the master 
+git checkout -b newbranch 62ecb3
+git rebase --onto master 76cada^
+
+###6.9. Differences between Git Revert, Checkout and Reset
 
 These three commands have entirely different purposes. They are not even remotely similar.
 
@@ -278,21 +314,84 @@ This command checks-out content from the repository and puts it in your work tre
 "git reset"
 This command is a little more complicated. It actually does a couple of different things depending on how it is invoked. It modifies the index (the so-called "staging area"). Or it changes which commit a branch head is currently pointing at. This command may alter existing history (by changing the commit that a branch references).
 
+"git cherry-pick"
 
-##6. BRANCHES FROM REPOSITORY
+This command let you pick one change from anywhere in the repository and will apply it on your local branch. It is handy if you're on a different branch for any reason but still need that specific change. Be aware that if you cherry-pick without pushing that change that this change is not persistent. It's committed to your local repository but not to the remote (it might be what you need in cases though).
 
-
-##7. PULL REQUEST
-
-##8. MERGE COMMITED CHANGES
+##7. BRANCHES FROM REPOSITORY
 
 
-##9. BASIC WORKFLOW
+>>old way
+git branch newbranch
+git checkout newbranch
+
+>>new way
+git checkout -b newbranch
+
+##8. PULL REQUEST
+
+##9. MERGE COMMITED CHANGES
 
 
-##10. FAQ
+##10. BASIC WORKFLOW
 
-###10.1 Differences between Git add ., git add -A,git -u /A, git add *
+In your github fork, you need to keep your master branch clean, by clean I mean without any changes, like that you can create at any time a branch from your master. Each time, that you want to commit a bug or a feature, you need to create a branch for it, which will be a copy of your master branch.
+
+When you do a pull request on a branch, you can continue to work on another branch and make another pull request on this other branch.
+
+Before creating a new branch, pull the changes from upstream. Your master needs to be up to date.
+
+Create the branch on your local machine and switch in this branch :
+
+$ git checkout -b [name_of_your_new_branch]
+
+Push the branch on github :
+
+$ git push origin [name_of_your_new_branch]
+
+When you want to commit something in your branch, be sure to be in your branch.
+
+You can see all branches created by using :
+
+$ git branch
+
+Which will show :
+
+* approval_messages
+  master
+  master_clean
+
+Add a new remote for your branch :
+
+$ git remote add [name_of_your_remote] 
+
+Push changes from your commit into your branch :
+
+$ git push [name_of_your_new_remote] [name_of_your_branch]
+
+Update your branch when the original branch from official repository has been updated :
+
+$ git fetch [name_of_your_remote]
+
+Then you need to apply to merge changes, if your branch is derivated from develop you need to do :
+
+$ git merge [name_of_your_remote]/develop
+
+Delete a branch on your local filesystem :
+
+$ git branch -d [name_of_your_new_branch]
+
+To force the deletion of local branch on your filesystem :
+
+$ git branch -D [name_of_your_new_branch]
+
+Delete the branch on github :
+
+$ git push origin :[name_of_your_new_branch]
+
+##11. FAQ
+
+###11.1 Differences between Git add ., git add -A,git -u /A, git add *
 In Git you can use several methods to add your files from Working Folder to the Stage area. 
 
 "Git add -A", will add all the files that are untracked, deleted or modified. This will look at all the files that are locally in the repository independently of the folder you are. 
