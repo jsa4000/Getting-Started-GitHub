@@ -179,7 +179,11 @@ In the simplest terms, git pull does a git fetch followed by a git merge. Fetch 
 ##5. COMMIT CHANGES
 
 
+
 ##5.1 FIXING MISTAKES AND UNDOING BAD COMMITS
+
+NOTE: A very good tutorial on youtube with the same materials is https://www.youtube.com/watch?v=FdZecVxzJbk
+	  Also this link could be a very good lecture for this topic: https://davidzych.com/difference-between-git-reset-soft-mixed-and-hard/
 
 For this section there are some basic commands you need to know:
 
@@ -188,6 +192,7 @@ For this section there are some basic commands you need to know:
 	"git log" this will print all the commits done in the current branch. Basically this is the historical of your repository. 
 		>> You need to know that every change and commit have different hash or "Id". Including the command --amend is going to give you different hash.
 		>> In case you don't want to change the commit (overwrite), you need to use the "--amend" parameter in the commit command.
+		>> use "git log --stat" to get more detailed view of the changes made.
 	"git reflog" this will print all the commits and actions done in the current bracnh. This will include all the actions, including, rest, revert, amend, etc..
 		>> This command is used to recover some branches that you deleted by mistake.
 		>> This log are deleted monthly by Git for maintenance task.
@@ -195,30 +200,83 @@ For this section there are some basic commands you need to know:
 	
 Depending on the case you would need different commands and actions:
 
-1. Undo a File
+###1. Undo a File
 
 In order to get back to and old version of a file that have been modified: git checkout your_file
 This action will undo the changes of that file.
 
-2. Modify the comment of the previous commit without alter the history. 
+###2. Modify the comment of the previous commit without alter the history. 
 
 This case is to modify the previous commit done. Note that the Hash of the commit will also change after this operation.
  In order to do tha the command is the following:
 
 git commit --amend -m "Override the previous comment"
 
-3. Change committed files from the previous commit without create a new one.
+###3. Change committed files from the previous commit without create a new one.
 
 git add .
 git commit --amend
 
 Git will prompt the committed changes and the previous comment, so it can be modified if needed.
+Type ":wq" to write and quit. This is a command from vi.
 
-4.
+###4. Reset the repository to a Commit point 
+
+This is used when you want to revert the repository to a certain commit. (Similar to a Restore point)
+The hash of the commit is needed to perform this operation.
+
+There are 3 several ways to reset the repository to a certain point: "--soft", "--mixed" and "--hard".
+
+The command to reset the repository is as follows:
+"git reset --soft commit-hash"
+ 
+Where commit-hash is the first (eight for example) numbers of the commit (e.j. d5f5a722ba9)
+	commit d5f5a722ba95f9a914d8db3a8ac226c3d1d7bfcd
+	Author: jsa4000 <jsa4000@gmail.com>
+	Date:   Mon Jan 30 16:42:50 2017 +0100
+
+The differences between those parameters depend on the status of the current reset regarding the staged files.
+In some cases you want to reset totally to a commit branch (hard), or sometimes you need to add some more files or do some modification after do the commit again. 
+
+###5. Clean staged or untracked files
+
+When you use "git status", you are going to see all the files untracked or changed for the future commit.
+Some times you need to remove these files from the commit. For example you have added some files, but you don't neccesay needed them for this commit. 
+The command to clean these changes is:
+git clean -df
+
+###6. Recover deleted branch or Commit
+
+This is used when you want to recover a bracnh that has been totally delete from the log (hoistorial of commits)
+To see all the logs (not only the commited or the valid ones) you have to use the following command:
+	"git reflog"
+This command will retrieve all the actions (not only the current commits) of the current branf
+To recover one of the branches from this log you need to checkout using the hash
+"git checkout to_recover_action_hash"
+In this moment if you use "git status" oe "git log" you will see that you are just after this action performed.
+However your branch keep with the same temporary number. So you need to create a new one from this point.
+"git branch backup"
+At this stage you will have a new branch with the recovered branch.
+
+###7. Revert 
+
+Revert will do the same as reset how ever this will maintain the log. So the log will remain and this will act a new commit.
+In order to revert to a current committed point you should need the hash
+git revert commit-hash
 
 
+###8. Differences between Git Revert, Checkout and Reset
 
+These three commands have entirely different purposes. They are not even remotely similar.
 
+"git revert"
+This command creates a new commit that undoes the changes from a previous commit. This command adds new history to the project (it doesn't modify existing history).
+
+"git checkout"
+This command checks-out content from the repository and puts it in your work tree. It can also have other effects, depending on how the command was invoked. For instance, it can also change which branch you are currently working on. This command doesn't make any changes to the history.
+
+"git reset"
+This command is a little more complicated. It actually does a couple of different things depending on how it is invoked. It modifies the index (the so-called "staging area"). Or it changes which commit a branch head is currently pointing at. This command may alter existing history (by changing the commit that a branch references).
 
 
 ##6. BRANCHES FROM REPOSITORY
