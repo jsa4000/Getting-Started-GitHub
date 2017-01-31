@@ -62,7 +62,6 @@ The installation of Github on Windows requires a Global variable to access to th
 To access from Comman line to the main control panel on windows (without Admin privileges) :
 		
 	"rundll32 sysdm.cpl,EditEnvironmentVariables"
-		
 
 ###2.3  Git Configuration 		
 	
@@ -73,6 +72,7 @@ have to do after Git is installed in the Machine.
 
 In order to configure your Git repository you have several choices.
 	
+###3.1 Create a New Repository	
 	
 In order to create a new repository, the main workflow is the following:
 		
@@ -99,66 +99,59 @@ This action is used to notify to the remote repository (administrators), to chec
 
 Basically the local work-flow is the same as described in the previous point, However the way we create the repository and the way we push back the changes is different.
 
-		In this case a entire repository (remote) is cloned into a local machine. Once you have cloned the repository, you can create new branches from this one, modify source-code, add new functionality,
-		fix bugs, add new files, delete, etc.. When all changes and modifications are done, you can finally can commit and push all the changes by using a "Pull-Request".
-		This action is used to notify to the remote repository (administrators), to check the changes done, differences and conflicts. Finally this branch will be merged with the new changes into the master branch.
-		
-		Basically the local work-flow is the same as described in the previous point, However the way we create the repository and the way we push back the changes is different.
-	
-		In order to clone you basically need to call the following instruction:
-			git clone https://github.com/YOUR-USERNAME/Spoon-Knife
-		
-		This will create a new directory inside the current folder with the name of the respository. This will retrieve all the content inside the master branch of the remoe respository.
-		
-		You can get the information of the remote address by typing the following command:
-			git remote -v          (-v or --verbose)
-	
-	
-	3.3 Fork and Clone an existing repository
-	
-		This Fork operation doesn't exist in Git. This is an extension of Git that Github has taken into consideration.
-		
-		A Fork is basically a copy (clone) of a repository into another. After the Fork, both repositories are totally independent from each other.  
-		Forking a repository allows you to freely experiment with changes without affecting the original project. Most commonly, forks are used to either propose 
-		changes to someone else's project or to use someone else's project as a starting point for your own idea.
+In this case a entire repository (remote) is cloned into a local machine. Once you have cloned the repository, you can create new branches from this one, modify source-code, add new functionality,
+fix bugs, add new files, delete, etc.. When all changes and modifications are done, you can finally can commit and push all the changes by using a "Pull-Request".
+This action is used to notify to the remote repository (administrators), to check the changes done, differences and conflicts. Finally this branch will be merged with the new changes into the master branch.
 
-		In a normal situation, your origin is also your remote (upstream) repository to perform pull-request your changes. However a fork it's different since this origin is your
-		copy and the upstream is the original repository of your fork. This is done to request some changes or modifications.
-		
-		In order to do a Fork, you need some more additional steps:
-				
-		1. First, perform a Fork operation suing GitHub to copy the repository into your account.
-		2. Clone the Fork into your local machine by doing a Clone.
-			git clone https://github.com/YOUR-USERNAME/Spoon-Knife
-		3. Press "git remote -v "to see the current configuration for the remote location (fetch and push)
-		4. Add new remote repository called upstream
-			git remote add upstream https://github.com/octocat/Spoon-Knife.git
-		
-		
-		The idea behind this operation is that you can fetch and push the changes into both remote repositories.
-			Ej. git push origin master -> This will push the local master into your origin remote respoitory
-				git fetch upstream master -> This will update (also pull) your local master branch with the upstream master copy of the remote repository
-		
+Basically the local work-flow is the same as described in the previous point, However the way we create the repository and the way we push back the changes is different.
+
+In order to clone you basically need to call the following instruction:
+	git clone https://github.com/YOUR-USERNAME/Spoon-Knife
+
+This will create a new directory inside the current folder with the name of the respository. This will retrieve all the content inside the master branch of the remoe respository.
+
+You can get the information of the remote address by typing the following command:
+	git remote -v          (-v or --verbose)
+
+
 ###3.3 Fork and Clone an existing repository
-	
-The Fork in Git it's basically a copy (clone) of a repository into another. After the fork, both repositories are totally independent from each other.  
+
+This Fork operation doesn't exist in Git. This is an extension of Git that Github has taken into consideration.
+
+A Fork is basically a copy (clone) of a repository into another. After the Fork, both repositories are totally independent from each other.  
 Forking a repository allows you to freely experiment with changes without affecting the original project. Most commonly, forks are used to either propose 
 changes to someone else's project or to use someone else's project as a starting point for your own idea.
 
+In a normal situation, your origin is also your remote (upstream) repository to perform pull-request your changes. However a fork it's different since this origin is your
+copy and the upstream is the original repository of your fork. This is done to request some changes or modifications.
+
+In order to do a Fork, you need some more additional steps:
+		
+1. First, perform a Fork operation suing GitHub to copy the repository into your account.
+2. Clone the Fork into your local machine by doing a Clone.
+	git clone https://github.com/YOUR-USERNAME/Spoon-Knife
+3. Press "git remote -v "to see the current configuration for the remote location (fetch and push)
+4. Add new remote repository called upstream
+	git remote add upstream https://github.com/octocat/Spoon-Knife.git
+
+
+The idea behind this operation is that you can fetch and push the changes into both remote repositories.
+	Ej. git push origin master -> This will push the local master into your origin remote respoitory
+		git fetch upstream master -> This will update (also pull) your local master branch with the upstream master copy of the remote repository
 
 ##3. GIT CONTEXT STAGE AREA vs REPOSITORY AREA
 
 
 ##4. UDATE THE CONTENT FROM THE SERVER (PULL vs FETCH)
 
-	Rebase will mean the changes that are retrieved from the remote server are firstly taken into consideration. So the merge are done upon this update opeation.
+Rebase will mean the changes that are retrieved from the remote server are firstly taken into consideration. So the merge are done upon this update opeation.
 
-	Runs git-pull means Fetch from and Merge with another repository or a local branch.	With --rebase, calls git-rebase instead of git-merge.
+Runs git-pull means Fetch from and Merge with another repository or a local branch.	With --rebase, calls git-rebase instead of git-merge.
 
-	Runs git-fetch with the given parameters, and calls git-merge to merge the retrieved head(s) into the current branch. 
+Runs git-fetch with the given parameters, and calls git-merge to merge the retrieved head(s) into the current branch. 
 
-	
-	In the simplest terms, git pull does a git fetch followed by a git merge. Fetch it's a more controlled way to see the changes prior to merge, if it's necessary or make sense.
+
+In the simplest terms, git pull does a git fetch followed by a git merge. Fetch it's a more controlled way to see the changes prior to merge, if it's necessary or make sense.
 
 
 ##5. COMMIT CHANGES
@@ -199,3 +192,30 @@ changes to someone else's project or to use someone else's project as a starting
 
 
 ##10. FAQ
+
+###10.1 Differences between Git add ., git add -A,git -u /A, git add *
+In Git you can use several methods to add your files from Working Folder to the Stage area. 
+
+"Git add -A", will add all the files that are untracked, deleted or modified. This will look at all the files that are locally in the repository independently of the folder you are. 
+However you can specify a folder after the sentence, "git add -A /my_folder"  
+
+"Git add ." will add all the files (untracked, deleted or modified) that are inside the current folder and subfolders.
+
+
+"Git add *" will add al the files untracked and modified. The deleted files since they are no more in the folder, they won't be included.
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
