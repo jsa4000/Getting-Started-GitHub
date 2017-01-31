@@ -3,11 +3,10 @@
 ##1. Installing Git
 
 Depending on the Operative System do you use: Linux, Microsoft Windows or MacOS you will need to use a different setup to correctly install Git into the machine.
-Also, Git provides two ways of managing the repositories. One is by using command line (by using standard Unix bash or standard cmd on windows) and the other us by using a tool with a graphical interface. However some functionality in the UI are omitted to simplify the work, this mean you can get lost very quickly if
-some error happens.
+Also, Git provides two ways of managing the repositories. One is by using the command line (by using standard Unix Bash or standard Cmd on windows) and the other is by using a tool with a graphical interface. However, some of functionality in the UI could be omitted or simplifies. In most of the cases solving an error or a conflict requires to switch to the command interface.
 
 From GitHub you can also manage the repositories. However, this is more tedious to maintain and slow. 
-GitHub is very good for some other tasks like: watch the contents, read files, creating new remote repositories, performing Merges for the received Pull-Request, etc...
+GitHub is very good for tasks like: watch the contents, small changes, read files (markdown), creating new remote repositories, performing Merges for the received Pull-Request, etc...
 
 ##1.1 Installing on Linux
 
@@ -60,7 +59,7 @@ The settings are stored in .gitconfig the current user folder, "\users\username\
 
 To list all the variables already configured, you can use the following command:
 
-git config --list
+	git config --list
 
 You can also configure the tool that will be used to see the differences between files and do the merges manually.
 
