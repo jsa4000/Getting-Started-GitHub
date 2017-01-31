@@ -131,7 +131,7 @@ You can get the information of the remote address by typing the following comman
 	
 ###2.3 Fork and Clone an Existing repository
 
-This Fork operation doesn't exist in Git. This is an extension of Git that Github has taken into consideration.
+The Fork operation doesn't exist in Git. This is an extension of Git that Github has taken into consideration.
 
 A Fork is basically a copy (clone) of a repository into another. After the Fork, both repositories are totally independent from each other. Forking a repository allows you to freely experiment with changes without affecting the original project. Most commonly, forks are used to either propose 
 changes to someone else's project or to use someone else's project as a starting point for your own idea.
@@ -151,9 +151,11 @@ In order to do a Fork, you need some more additional steps:
     	git remote add upstream https://github.com/octocat/Spoon-Knife.git
 
 The idea behind this operation is that you can fetch and push the changes into both remote repositories as you need it.
-> This will push the local master into your origin remote respoitory
+> - This will push the local master into your origin remote respoitory
+	
 	git push origin master
-> This will update (also pull) your local master branch with the upstream master copy of the remote repository
+> - This will update (also pull) your local master branch with the upstream master copy of the remote repository
+	
 	git fetch upstream master 
 
 
