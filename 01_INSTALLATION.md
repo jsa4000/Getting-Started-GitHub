@@ -144,9 +144,9 @@ In order to do a Fork, you need some more additional steps:
 		
 >1. First, perform a Fork operation suing GitHub to copy the repository into your account.
 >2. Clone the Fork into your local machine by doing a Clone.
-'''
+```
 	git clone https://github.com/YOUR-USERNAME/Spoon-Knife
-'''
+```
 >3. Press "git remote -v "to see the current configuration for the remote location (fetch and push)
 >4. Add new remote repository called upstream
 ```
