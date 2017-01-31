@@ -3,7 +3,7 @@
 ##1. Installing Git
 
 Depending on the Operative System do you use: Linux, Microsoft Windows or MacOS you will need to use a different setup to correctly install Git into the machine.
-Also, Git provides two ways of managing the repositories. One is by using the command line (by using standard Unix Bash or standard Cmd on windows) and the other is by using a tool with a graphical interface. However, some of functionality couldn't be implemented, so in most of the cases solving an error or a conflict requires to switch to the command interface.
+Also, Git provides two ways of managing the repositories. One is by using the command line (by using standard Unix Bash or standard Cmd on Windows) and the other is by using a tool with a graphical interface. However, some of functionality couldn't be implemented, so in most of the cases solving an error or a conflict requires to switch to the command interface.
 
 From GitHub you can also manage the repositories. However, this is more tedious to maintain and slow. 
 GitHub is very good for tasks like: watch the contents, small changes, read files (markdown), creating new remote repositories, performing Merges for the received Pull-Request, etc...
@@ -29,11 +29,11 @@ To get an automated installation you can use the Git Chocolatey package. Note th
 
 Another easy way to get Git installed is by installing GitHub for Windows. The installer includes a command line version of Git as well as the GUI. It also works well with Powershell, and sets up solid credential caching and sane CRLF settings. We’ll learn more about those things a little later, but suffice it to say they’re things you want. You can download this from the GitHub for Windows website, at http://windows.github.com.
 
-The installation of Github on Windows requires a Global variable to access to the main "git.exe" executable globally. In order to do this it's necessary to add the Path of the current executable versión of Git. In my case it was:
+The installation of Git requires to set a Global variable wiht the full path where the main executable "git.exe" is located. The standard folder installation on Ms Windows is the following:
 		
 	"C:\Program Files\Github\mingw64\bin"
 			
-To access from Comman line to the main control panel on windows (without Admin privileges) :
+To access to the main Control Panel on Ms Windows (without Admin privileges) from Command line:
 		
 	"rundll32 sysdm.cpl,EditEnvironmentVariables"
 
