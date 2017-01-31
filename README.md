@@ -142,7 +142,12 @@ The idea behind this operation is that you can fetch and push the changes into b
 ##3. GIT CONTEXT STAGE AREA vs REPOSITORY AREA
 
 
+
 ##4. UDATE THE CONTENT FROM THE SERVER (PULL vs FETCH)
+
+In order to update the current repository with another branch or remote repository, you need to know some different ways that will depend on your workflow or complexity of the changes you need to add or merge.
+
+There are two ways to update the current branch with another, this update doesn't necesary mean, the changes will be automatically be merged. In this case, you have to decide if first you want to see the diffs or let Git to merge automatically the changes.
 
 Rebase will mean the changes that are retrieved from the remote server are firstly taken into consideration. So the merge are done upon this update opeation.
 
@@ -152,9 +157,6 @@ Runs git-fetch with the given parameters, and calls git-merge to merge the retri
 
 
 In the simplest terms, git pull does a git fetch followed by a git merge. Fetch it's a more controlled way to see the changes prior to merge, if it's necessary or make sense.
-
-
-##5. COMMIT CHANGES
 
 	
 	Simple Workflow to update a repository using pull:
@@ -173,11 +175,32 @@ In the simplest terms, git pull does a git fetch followed by a git merge. Fetch 
 	Some people claims that the most useful way to update the respository is doinf the following:
 	
 		git pull --rebase
+
+##5. COMMIT CHANGES
+
+
+##5.1 FIXING MISTAKES AND UNDOING BAD COMMITS
+
+For this section there are some basic commands you need to know:
+
+	"git branch" this tell you all the branches you currently have in the repository. The selected are your current (checkout) branch.
+	"git status" this is going to tell you the current status of your branch, stage area, uncommited changes, etc..
+	"git log" this will print all the commits done in the current branch. Basically this is the historical of your repository. 
+		>> You need to know that every change and commit have different hash or "Id". Including the command --amend is going to give you different hash.
+		>> In case you don't want to change the commit (overwrite), you need to use the "--amend" parameter in the commit command.
+	"git reflog" this will print all the commits and actions done in the current bracnh. This will include all the actions, including, rest, revert, amend, etc..
+		>> This command is used to recover some branches that you deleted by mistake.
+		>> This log are deleted monthly by Git for maintenance task.
+	"git diff", by using this command you could get the differences between some branches or commits.
 	
+Depending on the case you would need different commands and actions:
+
+1. Undo a File
+
+In order to get back to and old version of a file that have been modified: git checkout your_file
+This action will undo the changes of that file.
 
 
-
-##5.1 BACK TO OLDER VERSION
 
 
 ##6. BRANCHES FROM REPOSITORY
