@@ -132,11 +132,27 @@ However you can specify a folder after the sentence, "git add -A /my_folder"
 
 
 
+Merge vs Rebase
 
+When you rebase your branch onto their branch, you tell Git to make it look as though you checked out their branch cleanly, then did all your work starting from there. That makes a clean, conceptually simple package of changes that someone can review. You can repeat this process again when there are new changes on their branch, and you will always end up with a clean set of changes "on the tip" of their branch.
+ 
+ https://wac-cdn.atlassian.com/dam/jcr:5b153a22-38be-40d0-aec8-5f2fffc771e5/03.svg?cdnVersion=ex
+ 
+When you merge their branch into your branch, you tie the two branch histories together at this point. If you do this again later with more changes, you begin to create an interleaved thread of histories: some of their changes, some of my changes, some of their changes. Some people find this messy or undesirable.
 
+![alt text](http://hostingadvice.digitalbrandsinc.netdna-cdn.com/wp-content/uploads/2014/12/git-merge.gif "Git Merge vs Rebase")
 
+https://wac-cdn.atlassian.com/dam/jcr:e229fef6-2c2f-4a4f-b270-e1e1baa94055/02.svg?cdnVersion=ex
 
+The Golden Rule of Rebasing
 
+Once you understand what rebasing is, the most important thing to learn is when not to do it. The golden rule of git rebase is to never use it on public branches.
+
+Resumen
+
+And that’s all you really need to know to start rebasing your branches. If you would prefer a clean, linear history free of unnecessary merge commits, you should reach for git rebase instead of git merge when integrating changes from another branch.
+
+On the other hand, if you want to preserve the complete history of your project and avoid the risk of re-writing public commits, you can stick with git merge. Either option is perfectly valid, but at least now you have the option of leveraging the benefits of git rebase.
 
 
 
