@@ -1,30 +1,27 @@
-#3. FIXING MISTAKES AND UNDOING BAD COMMITS
+#Fixing mistakes and undoing bad Commits
 
-
-NOTE: A very good tutorial on youtube with the same materials is https://www.youtube.com/watch?v=FdZecVxzJbk
-	  Also this link could be a very good lecture for this topic: https://davidzych.com/difference-between-git-reset-soft-mixed-and-hard/
+##1 Basic Commands
 
 For this section there are some basic commands you need to know:
 
-	"git branch" this tell you all the branches you currently have in the repository. The selected are your current (checkout) branch.
-	"git status" this is going to tell you the current status of your branch, stage area, uncommited changes, etc..
-	"git log" this will print all the commits done in the current branch. Basically this is the historical of your repository. 
-		>> You need to know that every change and commit have different hash or "Id". Including the command --amend is going to give you different hash.
-		>> In case you don't want to change the commit (overwrite), you need to use the "--amend" parameter in the commit command.
-		>> use "git log --stat" to get more detailed view of the changes made.
-	"git reflog" this will print all the commits and actions done in the current bracnh. This will include all the actions, including, rest, revert, amend, etc..
-		>> This command is used to recover some branches that you deleted by mistake.
-		>> This log are deleted monthly by Git for maintenance task.
-	"git diff", by using this command you could get the differences between some branches or commits.
-	
-Depending on the case you would need different commands and actions:
+- "git branch" this tell you all the branches you currently have in the repository. The selected are your current (checkout) branch.
+- "git status" this is going to tell you the current status of your branch, stage area, uncommited changes, etc..
+- "git log" this will print all the commits done in the current branch. Basically this is the historical of your repository. 
+	> You need to know that every change and commit have different hash or "Id". Including the command --amend is going to give you different hash.
+	> In case you don't want to change the commit (overwrite), you need to use the "--amend" parameter in the commit command.
+	> use "git log --stat" to get more detailed view of the changes made.
+- "git reflog" this will print all the commits and actions done in the current bracnh. This will include all the actions, including, rest, revert, amend, etc..
+- 	> This command is used to recover some branches that you deleted by mistake.
+- 	> This log are deleted monthly by Git for maintenance task.
+- "git diff", by using this command you could get the differences between some branches or commits.
 
-##7.1 Undo a File from current change.
+##2 Options
+##1 Undo a File from current change.
 
 In order to get back to and old version of a file that have been modified: git checkout your_file
 This action will undo the changes of that file.
 
-##7.2 Modify the comment of the previous commit without alter the history. 
+###2.1 Modify the comment of the previous commit without alter the history. 
 
 This case is to modify the previous commit done. Note that the Hash of the commit will also change after this operation.
  In order to do tha the command is the following:
@@ -32,7 +29,7 @@ This case is to modify the previous commit done. Note that the Hash of the commi
 git commit --amend -m "Override the previous comment"
 
 
-##7.3 Change committed files from the previous commit without create a new one.
+###2.2 Change committed files from the previous commit without create a new one.
 
 
 git add .
@@ -42,7 +39,7 @@ Git will prompt the committed changes and the previous comment, so it can be mod
 Type ":wq" to write and quit. This is a command from vi.
 
 
-##7.4 Reset the repository to a Commit point.
+###2.3 Reset the repository to a Commit point.
 
 
 This is used when you want to revert the repository to a certain commit. (Similar to a Restore point)
@@ -61,7 +58,7 @@ Where commit-hash is the first (eight for example) numbers of the commit (e.j. d
 The differences between those parameters depend on the status of the current reset regarding the staged files.
 In some cases you want to reset totally to a commit branch (hard), or sometimes you need to add some more files or do some modification after do the commit again. 
 
-##7.5 Clean modified files or untracked files from Commit.
+###2.4 Clean modified files or untracked files from Commit.
 
 
 When you use "git status", you are going to see all the files untracked or changed for the future commit.
@@ -70,7 +67,7 @@ The command to clean these changes is:
 git clean -df
 
 
-##7.6 Recover deleted branch or Commit from historical reference log.
+###2.5 Recover deleted branch or Commit from historical reference log.
 
 
 This is used when you want to recover a bracnh that has been totally delete from the log (hoistorial of commits)
@@ -84,7 +81,7 @@ However your branch keep with the same temporary number. So you need to create a
 "git branch backup"
 At this stage you will have a new branch with the recovered branch.
 
-##7.7 Revert changes to a point with historical.
+###2.6 Revert changes to a point with historical.
 
 
 Revert will do the same as reset how ever this will maintain the log. So the log will remain and this will act a new commit.
@@ -92,7 +89,7 @@ In order to revert to a current committed point you should need the hash
 git revert commit-hash
 
 
-##7.8 Cherry-Picking specific commits from another branch to the current.
+###2.7 Cherry-Picking specific commits from another branch to the current.
 
 
 NOTE: For further explanation you could read the following link:  https://ariejan.net/2010/06/10/cherry-picking-specific-commits-from-another-branch/
@@ -112,7 +109,7 @@ git cherry-pick 62ecb3
 git checkout -b newbranch 62ecb3
 git rebase --onto master 76cada^
 
-##7.9 Differences between Git Revert, Checkout and Reset.
+###2.8 Differences between Git Revert, Checkout and Reset.
 
 These three commands have entirely different purposes. They are not even remotely similar.
 
@@ -129,3 +126,7 @@ This command is a little more complicated. It actually does a couple of differen
 
 This command let you pick one change from anywhere in the repository and will apply it on your local branch. It is handy if you're on a different branch for any reason but still need that specific change. Be aware that if you cherry-pick without pushing that change that this change is not persistent. It's committed to your local repository but not to the remote (it might be what you need in cases though).
 
+##3. References
+
+- A very good tutorial on youtube with the same materials is https://www.youtube.com/watch?v=FdZecVxzJbk
+- Also this link could be a very good lecture for this topic: https://davidzych.com/difference-between-git-reset-soft-mixed-and-hard/
