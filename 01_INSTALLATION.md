@@ -114,6 +114,8 @@ In order to create a new repository, the main workflow is the following:
 
 - Finally, upload (push) all the content of the repository into the origin (remote). To push the content of you current Branch/HEAD, you need to specify the branch or head and your remote Git.
 
+		git add .
+		git commit -m "commit message to add"
 		git push origin master
 
 A .gitignore file specifies intentionally untracked files that Git should ignore. Files already tracked by Git are not affected.
