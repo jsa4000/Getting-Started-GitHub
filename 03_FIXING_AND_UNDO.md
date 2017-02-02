@@ -109,8 +109,8 @@ This is in contrast with other ways such as merge and rebase which normally appl
 	
 1. Checkout the master Branch and apply the commit "62ecb3" of the branch [feature]
 
- 	git checkout master
- 	git cherry-pick 62ecb3
+		git checkout master
+ 		git cherry-pick 62ecb3
 
 2. You could also copy the entire log history from 76cada - 62ecb3 to the master 
 
