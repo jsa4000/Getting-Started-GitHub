@@ -18,7 +18,7 @@ For this section there are some basic commands you need to know:
 
 ##2 Options
 
-##2.1 Undo a File from current change.
+##2.1 Undo a File
 
 In order to get back (undo) to the old version in HEAD of a specific file use: 
 	
@@ -27,7 +27,7 @@ In order to get back (undo) to the old version in HEAD of a specific file use:
 After this command, the file will be back at the same state as previous commit.
 
 
-###2.2 Modify the comment of a previous commit. 
+###2.2 Modify the comment of previous commit
 
 This case must be used in order to modify the previous message written in previous commit without alter the log history of the repository. Note that the Hash of the commit will also change after this operation.
 
