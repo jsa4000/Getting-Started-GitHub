@@ -33,7 +33,7 @@ This case must be used in order to modify the message written in previous commit
 
 	git commit --amend -m "Override the previous comment"
 
-###2.3 Change committed files from the previous commit without create a new one.
+###2.3 Change previous Commit.
 
 
 	git add .
