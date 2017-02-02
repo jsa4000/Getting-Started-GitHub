@@ -159,7 +159,10 @@ In a normal situation, your origin is also your remote (upstream) repository. Th
 
 In order to do a Fork, you need some more additional steps:
 		
-- First, perform a Fork operation using GitHub to copy the repository into your account.		
+- First, perform a Fork operation using GitHub to copy the repository into your account.	
+
+![alt text](http://orm-chimera-prod.s3.amazonaws.com/1234000000726/images/tutorial_click_fork.png "Git Fork")
+
 - Clone the Fork into your local machine by performing a clone.
 
     	git clone https://github.com/YOUR-USERNAME/Spoon-Knife
