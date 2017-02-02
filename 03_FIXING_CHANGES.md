@@ -1,6 +1,6 @@
 #Fixing Mistakes and Undoing Bad Commits
 
-##1 Basic Commands
+##1. Basic Commands
 
 For this section there are some basic commands you need to know:
 
@@ -16,7 +16,7 @@ For this section there are some basic commands you need to know:
 - **git diff** and **git difftool**, these commands are used to get the differences between some branches or commits done in the remote.
 - **git merge** and **git mergetool**, these commands are used to merge between branches (remote and local).
 
-##2 Options
+##2. Options
 
 ##2.1 Undo a File
 
