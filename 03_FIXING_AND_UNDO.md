@@ -20,7 +20,7 @@ For this section there are some basic commands you need to know:
 
 ##2.1 Undo a File
 
-In order to get back (undo) to the old version in HEAD of a specific file use: 
+In order to get back to the current HEAD version of a specific file, you need to use the following command: 
 	
 	git checkout your_file
 
