@@ -9,7 +9,7 @@ To start wiht this section there are some basic commands you need to know:
 - **git status** this command is used to get the current status of the branch. The information are related to the current files in the stage area, uncommited changes, untracked files, etc..
 - **git log** this command is used to get all the commits done in the current branch. Basically this is the historical of your repository. 
 
-	> You need to know that every change and commit have different hash or "Id". Including the command --amend is going to give you different hash.
+	> You need to know that every action or commit have different Hashes or "Ids". Even using the parameter ***--amend*** to the commit command, will generate different hashes.
 	
 	> In case you don't want to change the commit (overwrite), you need to use the "--amend" parameter in the commit command.
 	
