@@ -109,8 +109,9 @@ In order to create a new repository, the main workflow is the following:
 	
  In order to see the changes you can type the following commands  (-v or --verbose).
 	
-	git remote -v
-	git remote show origin
+		git remote -v
+	
+		git remote show origin
 
 - Finally, upload (push) all the content of the repository into the origin (remote). To push the content of you current Branch/HEAD, you need to specify the branch or head and your remote Git.
 
@@ -173,9 +174,9 @@ In order to do a Fork, you need some more additional steps:
 	
 		git push origin master
 	
-- In the case you need to update your current repository from the forked repository (we called *"upstream"*). You have some options:
+- In the case you need to update your current repository from the forked repository (we called *"upstream"*). You have several options you can use:
 
-	a. Yo can use the pull command:
+	a. You can use the pull command:
 	
 			git pull upstream master
 	
