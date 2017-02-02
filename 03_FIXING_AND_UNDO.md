@@ -29,7 +29,7 @@ After this command, the file will be back at the same state as previous commit.
 
 ###2.2 Modify the comment of previous commit
 
-This case must be used in order to modify the previous message written in previous commit without alter the log history of the repository. Note that the Hash of the commit will also change after this operation.
+This case must be used in order to modify the message written in previous commit without alter the log history of the repository. Note that the Hash of the commit will also change after this operation.
 
 	git commit --amend -m "Override the previous comment"
 
