@@ -109,8 +109,8 @@ In order to create a new repository, the main workflow is the following:
 	
  In order to see the changes you can type the following commands  (-v or --verbose).
 	
-		git remote -v
-		git remote show origin
+	git remote -v
+	git remote show origin
 
 - Finally, upload (push) all the content of the repository into the origin (remote). To push the content of you current Branch/HEAD, you need to specify the branch or head and your remote Git.
 
@@ -165,16 +165,16 @@ In order to do a Fork, you need some more additional steps:
 - You can type "git remote -v "to see the current configuration for the remote "origin" location (fetch and push)
 - Add new remote repository called *"upstream"*. The idea behind this operation is that you can fetch and push the changes into both remote repositories as you need it.
 
-	git remote add upstream https://github.com/octocat/Spoon-Knife.git
+		git remote add upstream https://github.com/octocat/Spoon-Knife.git
 
 - In the case you need to push commits from the local master to your origin remote repository:
 	
-	git push origin master
+		git push origin master
 	
 - In the case you need to update your current repository from the forked repository (we called *"upstream"*). You have some options:
 a. Yo can use the pull command:
 	
-	git pull upstream master
+		git pull upstream master
 	
 b. You can use the fetch command:
 
