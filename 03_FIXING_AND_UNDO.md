@@ -108,10 +108,12 @@ This is in contrast with other ways such as merge and rebase which normally appl
 				76cada - 62ecb3 - b886a0 [feature]
 	
 1. Checkout the master Branch and apply the commit "62ecb3" of the branch [feature]
+
 	git checkout master
 	git cherry-pick 62ecb3
 
 2. You could also copy the entire log history from 76cada - 62ecb3 to the master 
+
 	git checkout -b newbranch 62ecb3
 	git rebase --onto master 76cada^
 
