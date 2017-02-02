@@ -16,6 +16,6 @@ Markdown is a way to style text on the web. You control the display of the docum
 
 You can use Markdown most places around GitHub:
 
-- Gists
+- Gits
 - Comments in Issues and Pull Requests
-. Files with the .md or .markdown extension
+- Files with the .md or .markdown extension
