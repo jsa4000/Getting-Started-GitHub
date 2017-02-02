@@ -76,16 +76,21 @@ The command to clean these changes is:
 
 This is used when you want to recover a bracnh that has been totally delete from the log (hoistorial of commits)
 To see all the logs (not only the commited or the valid ones) you have to use the following command:
-	"git reflog"
+	
+	git reflog
+	
 This command will retrieve all the actions (not only the current commits) of the current branf
-To recover one of the branches from this log you need to checkout using the hash
-	"git checkout to_recover_action_hash"
+To recover one of the branches from this log you need to checkout using the hash.
+
+	git checkout to_recover_action_hash
+	
 In this moment if you use "git status" oe "git log" you will see that you are just after this action performed.
 However your branch keep with the same temporary number. So you need to create a new one from this point.
-	"git branch backup"
+	
+	git branch backup
 At this stage you will have a new branch with the recovered branch.
 
-###2.7 Revert changes to a point with historical.
+###2.7 Revert changes to a point with historical
 
 
 Revert will do the same as reset how ever this will maintain the log. So the log will remain and this will act a new commit.
@@ -93,7 +98,7 @@ In order to revert to a current committed point you should need the hash
 git revert commit-hash
 
 
-###2.8 Cherry-Picking specific commits from another branch to the current.
+###2.8 Cherry-Picking specific commits from another branch to the current
 
 Cherry picking in git means to choose a commit from one branch and apply it onto another.
 This is in contrast with other ways such as merge and rebase which normally applies many commits onto a another branch.
@@ -114,7 +119,7 @@ This is in contrast with other ways such as merge and rebase which normally appl
 >For further explanation you could read the following link:  https://ariejan.net/2010/06/10/cherry-picking-specific-commits-from-another-branch/
 	
 
-###2.9 Differences between Git Revert, Checkout and Reset.
+###2.9 Differences between revert, checkout and reset
 
 These three commands have entirely different purposes. They are not even remotely similar.
 
@@ -128,5 +133,5 @@ These three commands have entirely different purposes. They are not even remotel
 
 ##3. References
 
-- A very good tutorial on youtube with the same materials is https://www.youtube.com/watch?v=FdZecVxzJbk
-- Also this link could be a very good lecture for this topic: https://davidzych.com/difference-between-git-reset-soft-mixed-and-hard/
+- Tutorial on youtube with a very detailed information: https://www.youtube.com/watch?v=FdZecVxzJbk
+- Lecture related to this topic: https://davidzych.com/difference-between-git-reset-soft-mixed-and-hard/
