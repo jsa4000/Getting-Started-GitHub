@@ -58,16 +58,20 @@ The command to reset the repository is as follows:
 		Date:   Mon Jan 30 16:42:50 2017 +0100
 
 The differences between those parameters depend on the status of the current reset regarding the staged files.
-In some cases you want to reset totally to a commit branch (hard), or sometimes you need to add some more files or do some modification after do the commit again. 
+In some cases you want to reset totally to an specific commited branch (hard), or sometimes you need to add some more files or do some modification after do the commit again. 
 
-###2.5 Clean modified files or untracked files from Commit.
+###2.5 Clean Modified files or Untracked files from Commit.
 
-When you use *git status", you are going to see all the files untracked or changed for the future commit.
-Some times you need to remove these files from the commit. For example you have added some files, but you don't neccesay needed them for this commit. The command to clean these changes is:
+When you use ***git status***, you see all the files untracked or modified that are not commited or pushed yet.
+Sometimes you need to remove these files from the current commit. 
+
+>For example, you have added some files, but you don't neccesay need them for this commit. 
+
+The command to clean these changes is:
 	
 	git clean -df
 
-###2.6 Recover deleted Branches or Commit from historical reference log.
+###2.6 Recover Deleted Branches or Commits
 
 This is used when you want to recover a branch that has been totally deleted from the log.
 Following command is used to see all the operations done in the respository:
@@ -85,14 +89,14 @@ However the checked branch will keep with the same temporary number. So you need
 	
 At this stage you will have a new branch with the recovered branch.
 
-###2.7 Revert changes to a commit with historical
+###2.7 Revert changes with Log
 
 By using ***revert*** the outcomes obtained will be very similar as using the command ***reset***. However, the log is not going to be *"reverted"* so it will be logged as a new commit in the historical.
 >In order to revert to a current committed point you should need the Hash.
 	
 	git revert commit-hash
 
-###2.8 Cherry-Picking specific commits from another branch to the current
+###2.8 Cherry-Picking specific Commits
 
 Cherry picking in git means to choose a commit from one branch and apply it onto another.
 This is in contrast with other ways such as merge and rebase which normally applies many commits onto a another branch.
