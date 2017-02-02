@@ -82,6 +82,9 @@ You can also configure additional tools that will be launched to compare or merg
 		name = WinMerge
 		trustExitCode = true
 		cmd = "/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe" -u -e $LOCAL $REMOTE 
+		
+Moreover, If you want to cache your credentials, so you don't have to type it every time, you can use the following command:
+	git config --global credential.helper wincred
 	
 ##2.Configuring the Repositery
 
