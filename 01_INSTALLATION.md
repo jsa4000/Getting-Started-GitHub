@@ -105,12 +105,12 @@ In order to create a new repository, the main workflow is the following:
 
 - Add a remote repository. Eventually the main remote Git will be called "origin", but a remote Git could be whatever name you want.
 
-			git remote add origin https://github.com/user/repo.git
+		git remote add origin https://github.com/user/repo.git
 	
  In order to see the changes you can type the following commands  (-v or --verbose).
 	
-		git remote -v
-		git remote show origin
+	git remote -v
+	git remote show origin
 
 - Finally, upload (push) all the content of the repository into the origin (remote). To push the content of you current Branch/HEAD, you need to specify the branch or head and your remote Git.
 
