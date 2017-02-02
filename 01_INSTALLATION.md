@@ -84,6 +84,7 @@ You can also configure additional tools that will be launched to compare or merg
 		cmd = "/c/Program\\ Files\\ \\(x86\\)/WinMerge/WinMergeU.exe" -u -e $LOCAL $REMOTE 
 		
 Moreover, If you want to cache your credentials, so you don't have to type it every time, you can use the following command:
+
 	git config --global credential.helper wincred
 	
 ##2.Configuring the Repositery
@@ -130,6 +131,7 @@ When all changes and modifications are done, you can finally stage, commit and p
 Basically the local work-flow is the same as described in the previous point, However the way we create the repository and the way we push back the changes is different.
 
 In order to clone you basically need to call the following instruction:
+
 	git clone https://github.com/YOUR-USERNAME/Spoon-Knife
 
 This will create a new directory inside the current folder with the name of the respository. This will retrieve all the content inside the master branch of the remote repository. The usual way to proceed after the clone, it's to create new branch so the master won't be modified:
@@ -163,7 +165,7 @@ In order to do a Fork, you need some more additional steps:
 - You can type "git remote -v "to see the current configuration for the remote "origin" location (fetch and push)
 - Add new remote repository called *"upstream"*. The idea behind this operation is that you can fetch and push the changes into both remote repositories as you need it.
 
-    	git remote add upstream https://github.com/octocat/Spoon-Knife.git
+	git remote add upstream https://github.com/octocat/Spoon-Knife.git
 
 - In the case you need to push commits from the local master to your origin remote repository:
 	
