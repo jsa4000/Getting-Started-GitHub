@@ -33,8 +33,9 @@ This case must be used in order to modify the message written in previous commit
 
 	git commit --amend -m "Override the previous comment"
 
-###2.3 Change previous Commit.
+###2.3 Change Pevious Commit.
 
+This is used when a modification need to be done for previous commit.
 
 	git add .
 	git commit --amend
