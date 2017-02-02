@@ -4,9 +4,9 @@
 
 For this section there are some basic commands you need to know:
 
-- **git branch** this tell you all the branches you currently have in the repository. The selected are your current (checkout) branch.
-- **git status** this is going to tell you the current status of your branch, stage area, uncommited changes, etc..
-- **git log** this will print all the commits done in the current branch. Basically this is the historical of your repository. 
+- **git branch** this command list all branches currently are in the repository. The selected item is the current branch checked out.
+- **git status** this command give the current status of the current branch. The information are related to the current files in the stage area, uncommited changes, untracked files, etc..
+- **git log** this command is used to get all the commits done in the current branch. Basically this is the historical of your repository. 
 	> - You need to know that every change and commit have different hash or "Id". Including the command --amend is going to give you different hash.
 	> - In case you don't want to change the commit (overwrite), you need to use the "--amend" parameter in the commit command.
 	> - use "git log --stat" to get more detailed view of the changes made.
