@@ -13,20 +13,23 @@ For this section there are some basic commands you need to know:
 - **git reflog** this will print all the commits and actions done in the current branch. As said, this will include all ctions, including, rest, revert, amend, etc..
  	> - This command is used to recover branches that have been deleted by mistake.
  	> - This log is deleted monthly by Git for maintenance tasks.
-- **git diff** and **git difftool**, this command it is used to get the differences between some branches or commits done in the remote.
-- **git merge** and **git mergetool**, this command it is used to merge between branches (remote and local).
+- **git diff** and **git difftool**, these commands are used to get the differences between some branches or commits done in the remote.
+- **git merge** and **git mergetool**, these commands are used to merge between branches (remote and local).
 
 ##2 Options
 
 ##2.1 Undo a File from current change.
 
-In order to get back to and old version of a file that have been modified: git checkout your_file
-This action will undo the changes of that file.
+In order to get back (undo) to the old version in HEAD of a specific file use: 
+	
+	git checkout your_file
 
-###2.2 Modify the comment of the previous commit without alter the history. 
+After this command, the file will be back at the same state as previous commit.
 
-This case is to modify the previous commit done. Note that the Hash of the commit will also change after this operation.
-In order to do tha the command is the following:
+
+###2.2 Modify the comment of a previous commit. 
+
+This case must be used in order to modify the previous message written in previous commit without alter the log history of the repository. Note that the Hash of the commit will also change after this operation.
 
 	git commit --amend -m "Override the previous comment"
 
