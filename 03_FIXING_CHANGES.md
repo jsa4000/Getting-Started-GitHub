@@ -9,13 +9,13 @@ To start wiht this section there are some basic commands you need to know:
 - **git status** this command give the current status of the current branch. The information are related to the current files in the stage area, uncommited changes, untracked files, etc..
 - **git log** this command is used to get all the commits done in the current branch. Basically this is the historical of your repository. 
 
-	> - You need to know that every change and commit have different hash or "Id". Including the command --amend is going to give you different hash.
-	> - In case you don't want to change the commit (overwrite), you need to use the "--amend" parameter in the commit command.
-	> - use "git log --stat" to get more detailed view of the changes made.
+	> You need to know that every change and commit have different hash or "Id". Including the command --amend is going to give you different hash.
+	> In case you don't want to change the commit (overwrite), you need to use the "--amend" parameter in the commit command.
+	> Use "git log --stat" to get more detailed view of the changes made.
 - **git reflog** this will print all the commits and actions done in the current branch. As said, this will include all ctions, including, rest, revert, amend, etc..
 
- 	> - This command is used to recover branches that have been deleted by mistake.
- 	> - This log is deleted monthly by Git for maintenance tasks.
+ 	> This command is used to recover branches that have been deleted by mistake.
+ 	> This log is deleted monthly by Git for maintenance tasks.
 - **git diff** and **git difftool**, these commands are used to get the differences between some branches or commits done in the remote.
 - **git merge** and **git mergetool**, these commands are used to merge between branches (remote and local).
 
