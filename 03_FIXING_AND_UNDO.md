@@ -29,7 +29,6 @@ In order to do tha the command is the following:
 
 	git commit --amend -m "Override the previous comment"
 
-
 ###2.3 Change committed files from the previous commit without create a new one.
 
 
