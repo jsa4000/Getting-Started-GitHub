@@ -2,11 +2,11 @@
 
 To start wiht this section there are some basic commands you need to know:
 
-- **git branch** this command will list all the branches that currently are in the repository. 
+- **git branch** this command will list all the branches that are created currently in the repository. 
 
 	> The selected item is the current branch checked out.
 	
-- **git status** this command give the current status of the current branch. The information are related to the current files in the stage area, uncommited changes, untracked files, etc..
+- **git status** this command is used to get the current status of the branch. The information are related to the current files in the stage area, uncommited changes, untracked files, etc..
 - **git log** this command is used to get all the commits done in the current branch. Basically this is the historical of your repository. 
 
 	> You need to know that every change and commit have different hash or "Id". Including the command --amend is going to give you different hash.
