@@ -88,7 +88,7 @@ At this stage you will have a new branch with the recovered branch.
 
 ###2.7 Revert changes to a commit with historical
 
-By using the command ***git revert*** you will get similar outcomes as using the command ***git reset***. However, with this command the log is not going to be *"reverted"* and this result as a new commit added to the log.
+Using the command ***git revert***, the outcomes will be similar as using the command ***git reset***. However, with this command the log is not going to be *"reverted"*. So, this will result as a new commit added to the log.
 >In order to revert to a current committed point you should need the hash:
 	
 	git revert commit-hash
