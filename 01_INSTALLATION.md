@@ -172,16 +172,17 @@ In order to do a Fork, you need some more additional steps:
 		git push origin master
 	
 - In the case you need to update your current repository from the forked repository (we called *"upstream"*). You have some options:
+
 a. Yo can use the pull command:
 	
 		git pull upstream master
 	
 b. You can use the fetch command:
 
-	git fetch upstream master 
-	git merge upstream/master
+		git fetch upstream master 
+		git merge upstream/master
 	
-*We will explain the differences between Pull and Fetch. I could say by instance that Fetch is safer than Pull since you can diff and merge manually. *
+>We will explain the differences between Pull and Fetch. I could say by instance that Fetch is safer than Pull since you can diff and merge manually. 
 
 
 
