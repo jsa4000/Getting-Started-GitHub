@@ -67,29 +67,28 @@ Some times you need to remove these files from the commit. For example you have 
 	
 	git clean -df
 
-###2.6 Recover deleted branch or Commit from historical reference log.
+###2.6 Recover deleted Branches or Commit from historical reference log.
 
-
-This is used when you want to recover a bracnh that has been totally delete from the log (hoistorial of commits)
-To see all the logs (not only the commited or the valid ones) you have to use the following command:
+This is used when you want to recover a branch that has been totally deleted from the log.
+Following command is used to see all the operations done in the respository:
 	
 	git reflog
 	
-This command will retrieve all the actions (not only the current commits) of the current branf
-To recover one of the branches from this log you need to checkout using the hash.
+To recover one of the branches from this log you need to checkout using the Hash.
 
 	git checkout to_recover_action_hash
 	
-In this moment if you use "git status" oe "git log" you will see that you are just after this action performed.
-However your branch keep with the same temporary number. So you need to create a new one from this point.
+After the checkout, you can use ***"git status"*** or ***"git log"***, to see the current status after this action.
+However the checked branch will keep with the same temporary number. So you need to create a new one from this point.
 	
 	git branch backup
+	
 At this stage you will have a new branch with the recovered branch.
 
 ###2.7 Revert changes to a commit with historical
 
-Using the command ***git revert***, the outcomes will be similar as using the command ***git reset***. However, with this command the log is not going to be *"reverted"*. So, this will result as a new commit added to the log.
->In order to revert to a current committed point you should need the hash:
+By using ***revert*** the outcomes obtained will be very similar as using the command ***reset***. However, the log is not going to be *"reverted"* so it will be logged as a new commit in the historical.
+>In order to revert to a current committed point you should need the Hash.
 	
 	git revert commit-hash
 
