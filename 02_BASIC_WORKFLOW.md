@@ -1,4 +1,12 @@
 
+Follow this links to basic Workflow:
+
+https://juristr.com/blog/2013/04/git-explained/
+http://rogerdudler.github.io/git-guide/
+https://es.atlassian.com/git/tutorials/svn-to-git-prepping-your-team-migration
+https://git-scm.com/book/en/v2/Getting-Started-Git-Basics
+https://blog.udemy.com/git-tutorial-a-comprehensive-guide/
+
 
 #5. UDATE THE CONTENT FROM THE SERVER (PULL vs FETCH)
 	
