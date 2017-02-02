@@ -24,6 +24,10 @@ In order to get back to the current HEAD version of a specific file, you need to
 	
 	git checkout your_file
 
+Another methof to unstage the current state is:
+
+	git reset HEAD "<file>..."
+
 After this command, the file will be back at the same state as previous commit.
 
 
