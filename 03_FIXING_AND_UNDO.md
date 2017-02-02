@@ -40,11 +40,9 @@ This case must be used in order to modify the message written in previous commit
 	git commit --amend
 
 Git will prompt the committed changes and the previous comment, so it can be modified if needed.
-Type ":wq" to write and quit. This is a command from vi.
-
+Type *":wq"* to write and quit. This is a command from vi.
 
 ###2.4 Reset the repository to a Commit point.
-
 
 This is used when you want to revert the repository to a certain commit. (Similar to a Restore point)
 The hash of the commit is needed to perform this operation.
@@ -64,12 +62,10 @@ In some cases you want to reset totally to a commit branch (hard), or sometimes 
 
 ###2.5 Clean modified files or untracked files from Commit.
 
-
-When you use "git status", you are going to see all the files untracked or changed for the future commit.
-Some times you need to remove these files from the commit. For example you have added some files, but you don't neccesay needed them for this commit. 
-The command to clean these changes is:
+When you use *git status", you are going to see all the files untracked or changed for the future commit.
+Some times you need to remove these files from the commit. For example you have added some files, but you don't neccesay needed them for this commit. The command to clean these changes is:
+	
 	git clean -df
-
 
 ###2.6 Recover deleted branch or Commit from historical reference log.
 
@@ -90,13 +86,12 @@ However your branch keep with the same temporary number. So you need to create a
 	git branch backup
 At this stage you will have a new branch with the recovered branch.
 
-###2.7 Revert changes to a point with historical
-
+###2.7 Revert changes to a commit with historical
 
 Revert will do the same as reset how ever this will maintain the log. So the log will remain and this will act a new commit.
 In order to revert to a current committed point you should need the hash
-git revert commit-hash
-
+	
+	git revert commit-hash
 
 ###2.8 Cherry-Picking specific commits from another branch to the current
 
@@ -107,16 +102,17 @@ This is in contrast with other ways such as merge and rebase which normally appl
 			\
 				76cada - 62ecb3 - b886a0 [feature]
 	
-1. Checkout the master Branch and apply the commit "62ecb3" of the branch [feature]
+1. Checkout the master Branch and apply the commit *"62ecb3"* of the branch [feature]
 
 		git checkout master
  		git cherry-pick 62ecb3
 
-2. You could also copy the entire log history from 76cada - 62ecb3 to the master 
+2. You could also copy the entire log history from *"76cada - 62ecb3"* commits from the current bracnh to the master 
 
 		git checkout -b newbranch 62ecb3
  		git rebase --onto master 76cada^
 
+It is handy if you're on a different branch for any reason but still need that specific change. Be aware that if you cherry-pick without pushing that change that this change is not persistent. It's committed to your local repository but not to the remote (it might be what you need in cases though).
 
 >For further explanation you could read the following link:  https://ariejan.net/2010/06/10/cherry-picking-specific-commits-from-another-branch/
 	
@@ -130,16 +126,6 @@ These three commands have entirely different purposes. They are not even remotel
 - **git checkout** This command checks-out content from the repository and puts it in your work tree. It can also have other effects, depending on how the command was invoked. For instance, it can also change which branch you are currently working on. This command doesn't make any changes to the history.
 
 - **git reset** This command is a little more complicated. It actually does a couple of different things depending on how it is invoked. It modifies the index (the so-called "staging area"). Or it changes which commit a branch head is currently pointing at. This command may alter existing history (by changing the commit that a branch references).
-
-###2.10 Apply commits between branches (cherry-pick)
-
-This command let you pick one change from anywhere in the repository and will apply it on your local branch. It is handy if you're on a different branch for any reason but still need that specific change. Be aware that if you cherry-pick without pushing that change that this change is not persistent. It's committed to your local repository but not to the remote (it might be what you need in cases though).
-This is in contrast with other ways such as merge and rebase which normally applies many commits onto a another branch.
-
-Make sure you are on the branch you want apply the commit to.
-
-	git checkout master
-	git cherry-pick <commit-hash>
 
 ##3. References
 
