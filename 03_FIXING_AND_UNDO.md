@@ -88,8 +88,8 @@ At this stage you will have a new branch with the recovered branch.
 
 ###2.7 Revert changes to a commit with historical
 
-Revert will do the same as the command *git reset*, however this will maintain the log. So the log won't be reverted and this will act a new commit added to the log.
-In order to revert to a current committed point you should need the hash
+By usung command ***git revert*** you will get similar results as using the command ***git reset***. However, with this command the log is not going to be *"reverted"* and this will operates as a new commit added to the log.
+>In order to revert to a current committed point you should need the hash:
 	
 	git revert commit-hash
 
@@ -119,7 +119,7 @@ It is handy if you're on a different branch for any reason but still need that s
 
 ###2.9 Differences between revert, checkout and reset
 
-These three commands have entirely different purposes. They are not even remotely similar.
+These three commands have entirely different purposes.
 
 - **git revert** This command creates a new commit that undoes the changes from a previous commit. This command adds new history to the project (it doesn't modify existing history).
 
