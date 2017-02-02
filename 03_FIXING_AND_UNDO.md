@@ -73,7 +73,7 @@ The command to clean these changes is:
 
 ###2.6 Recover Deleted Branches or Commits
 
-This is used when you want to recover a branch that has been totally deleted from the log.
+This is used to recover a branch that has been totally deleted from the log.
 Following command is used to see all the operations done in the respository:
 	
 	git reflog
