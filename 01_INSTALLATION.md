@@ -105,7 +105,7 @@ In order to create a new repository, the main workflow is the following:
 
 - Add a remote repository. Eventually the main remote Git will be called "origin", but a remote Git could be whatever name you want.
 
-		git remote add origin https://github.com/user/repo.git
+			git remote add origin https://github.com/user/repo.git
 	
  In order to see the changes you can type the following commands  (-v or --verbose).
 	
@@ -175,16 +175,16 @@ In order to do a Fork, you need some more additional steps:
 	
 - In the case you need to update your current repository from the forked repository (we called *"upstream"*). You have some options:
 
-a. Yo can use the pull command:
+	a. Yo can use the pull command:
 	
-		git pull upstream master
+			git pull upstream master
 	
-b. You can use the fetch command:
+	b. You can use the fetch command:
 
-		git fetch upstream master 
-		git merge upstream/master
+			git fetch upstream master 
+			git merge upstream/master
 	
->We will explain the differences between Pull and Fetch. I could say by instance that Fetch is safer than Pull since you can diff and merge manually. 
+	>We will explain the differences between Pull and Fetch. I could say by instance that Fetch is safer than Pull since you can diff and merge manually. 
 
 
 
