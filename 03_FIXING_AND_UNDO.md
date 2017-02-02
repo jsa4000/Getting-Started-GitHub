@@ -88,7 +88,7 @@ At this stage you will have a new branch with the recovered branch.
 
 ###2.7 Revert changes to a commit with historical
 
-Revert will do the same as reset how ever this will maintain the log. So the log will remain and this will act a new commit.
+Revert will do the same as the command *git reset*, however this will maintain the log. So the log won't be reverted and this will act a new commit added to the log.
 In order to revert to a current committed point you should need the hash
 	
 	git revert commit-hash
