@@ -97,24 +97,24 @@ In order to create a new repository, the main workflow is the following:
 		
 - First create a local repository in the local machine, adding all the structure and source files. Calling tt the following command inside a folder it will create a folder *".git"*, that will be used to recognize that folder as a Git Repository.
 	
-	git init
+		git init
 
 - Create some constraints (.gitignore) and initial files for the repository (.gitattribute, README.md, etc.. ).  To create nwe files into the respoitory directly in the bash you can type the following command:
 
-	touch .gitignore
+		touch .gitignore
 
 - Add a remote repository. Eventually the main remote Git will be called "origin", but a remote Git could be whatever name you want.
 
-	git remote add origin https://github.com/user/repo.git
+		git remote add origin https://github.com/user/repo.git
 	
  In order to see the changes you can type the following commands  (-v or --verbose).
 	
-	git remote -v
-	git remote show origin
+		git remote -v
+		git remote show origin
 
 - Finally, upload (push) all the content of the repository into the origin (remote). To push the content of you current Branch/HEAD, you need to specify the branch or head and your remote Git.
 
-	git push origin master
+		git push origin master
 
 A .gitignore file specifies intentionally untracked files that Git should ignore. Files already tracked by Git are not affected.
 An useful way to identify these constraints for not-desired untracked files, is to use the default pre-sets provided in GitHub site.
