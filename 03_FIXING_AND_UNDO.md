@@ -4,7 +4,7 @@
 
 For this section there are some basic commands you need to know:
 
-- **git branch** this command list all branches currently are in the repository. The selected item is the current branch checked out.
+- **git branch** this command will list all the branches that currently are in the repository. The selected item is the current branch checked out.
 - **git status** this command give the current status of the current branch. The information are related to the current files in the stage area, uncommited changes, untracked files, etc..
 - **git log** this command is used to get all the commits done in the current branch. Basically this is the historical of your repository. 
 	> - You need to know that every change and commit have different hash or "Id". Including the command --amend is going to give you different hash.
@@ -131,7 +131,15 @@ These three commands have entirely different purposes. They are not even remotel
 
 - **git reset**, This command is a little more complicated. It actually does a couple of different things depending on how it is invoked. It modifies the index (the so-called "staging area"). Or it changes which commit a branch head is currently pointing at. This command may alter existing history (by changing the commit that a branch references).
 
-- **git cherry-pick**.T his command let you pick one change from anywhere in the repository and will apply it on your local branch. It is handy if you're on a different branch for any reason but still need that specific change. Be aware that if you cherry-pick without pushing that change that this change is not persistent. It's committed to your local repository but not to the remote (it might be what you need in cases though).
+###2.10 Apply commits between branches (cherry-pick)
+
+This command let you pick one change from anywhere in the repository and will apply it on your local branch. It is handy if you're on a different branch for any reason but still need that specific change. Be aware that if you cherry-pick without pushing that change that this change is not persistent. It's committed to your local repository but not to the remote (it might be what you need in cases though).
+This is in contrast with other ways such as merge and rebase which normally applies many commits onto a another branch.
+
+Make sure you are on the branch you want apply the commit to.
+
+	git checkout master
+	git cherry-pick <commit-hash>
 
 ##3. References
 
