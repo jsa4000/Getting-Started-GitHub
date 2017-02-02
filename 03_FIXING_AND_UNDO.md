@@ -125,11 +125,11 @@ This is in contrast with other ways such as merge and rebase which normally appl
 
 These three commands have entirely different purposes. They are not even remotely similar.
 
-- **git revert**, This command creates a new commit that undoes the changes from a previous commit. This command adds new history to the project (it doesn't modify existing history).
+- **git revert** This command creates a new commit that undoes the changes from a previous commit. This command adds new history to the project (it doesn't modify existing history).
 
-- **git checkout**, This command checks-out content from the repository and puts it in your work tree. It can also have other effects, depending on how the command was invoked. For instance, it can also change which branch you are currently working on. This command doesn't make any changes to the history.
+- **git checkout** This command checks-out content from the repository and puts it in your work tree. It can also have other effects, depending on how the command was invoked. For instance, it can also change which branch you are currently working on. This command doesn't make any changes to the history.
 
-- **git reset**, This command is a little more complicated. It actually does a couple of different things depending on how it is invoked. It modifies the index (the so-called "staging area"). Or it changes which commit a branch head is currently pointing at. This command may alter existing history (by changing the commit that a branch references).
+- **git reset** This command is a little more complicated. It actually does a couple of different things depending on how it is invoked. It modifies the index (the so-called "staging area"). Or it changes which commit a branch head is currently pointing at. This command may alter existing history (by changing the commit that a branch references).
 
 ###2.10 Apply commits between branches (cherry-pick)
 
