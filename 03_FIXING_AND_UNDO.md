@@ -4,7 +4,7 @@
 
 For this section there are some basic commands you need to know:
 
-- **"git branch"** this tell you all the branches you currently have in the repository. The selected are your current (checkout) branch.
+- **"git branch"** this tell you all the branches you currently have in the repository. The selected one are your current branch.
 - **"git status"** this is going to tell you the current status of your branch, stage area, uncommited changes, etc..
 - **"git log"** this will print all the commits done in the current branch. Basically this is the historical of your repository. 
 	
