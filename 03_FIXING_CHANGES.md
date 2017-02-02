@@ -1,8 +1,6 @@
 #Fixing Mistakes and Undoing Bad Commits
 
-##1. Basic Commands
-
-For this section there are some basic commands you need to know:
+To start wiht this section there are some basic commands you need to know:
 
 - **git branch** this command will list all the branches that currently are in the repository. The selected item is the current branch checked out.
 - **git status** this command give the current status of the current branch. The information are related to the current files in the stage area, uncommited changes, untracked files, etc..
@@ -16,9 +14,7 @@ For this section there are some basic commands you need to know:
 - **git diff** and **git difftool**, these commands are used to get the differences between some branches or commits done in the remote.
 - **git merge** and **git mergetool**, these commands are used to merge between branches (remote and local).
 
-##2. Options
-
-##2.1 Undo a File
+##1 Undo a File
 
 In order to get back to the current HEAD version of a specific file, you need to use the following command: 
 	
@@ -31,13 +27,13 @@ Another methof to unstage the current state is:
 After this command, the file will be back at the same state as previous commit.
 
 
-###2.2 Modify the comment of previous commit
+###2 Modify the comment of previous commit
 
 This case must be used in order to modify the message written in previous commit without alter the log history of the repository. Note that the Hash of the commit will also change after this operation.
 
 	git commit --amend -m "Override the previous comment"
 
-###2.3 Change Pevious Commit.
+###3 Change Pevious Commit.
 
 This is used when a modification need to be done for previous commit.
 
@@ -47,7 +43,7 @@ This is used when a modification need to be done for previous commit.
 Git will prompt the committed changes and the previous comment, so it can be modified if needed.
 Type *":wq"* to write and quit. This is a command from vi.
 
-###2.4 Reset the repository to a Commit point.
+###4 Reset the repository to a Commit point.
 
 This is used to revert the repository to a certain commit. (Similar to a Restore point)
 The hash of the commit is needed to perform this operation.
@@ -65,7 +61,7 @@ The command to reset the repository is as follows:
 The differences between those parameters depend on the status of the current reset regarding the staged files.
 In some cases you want to reset totally to an specific commited branch (hard), or sometimes you need to add some more files or do some modification after do the commit again. 
 
-###2.5 Clean Modified files or Untracked files from Commit.
+###5 Clean Modified files or Untracked files from Commit.
 
 When you use ***git status***, you see all the files untracked or modified that are not commited or pushed yet.
 Sometimes you need to remove these files from the current commit. 
@@ -76,7 +72,7 @@ The command to clean these changes is:
 	
 	git clean -df
 
-###2.6 Recover Deleted Branches or Commits
+###6 Recover Deleted Branches or Commits
 
 This is used to recover a branch that has been totally deleted from the log.
 Following command is used to see all the operations done in the respository:
@@ -94,14 +90,14 @@ However the checked branch will keep with the same temporary number. So you need
 	
 At this stage you will have a new branch with the recovered branch.
 
-###2.7 Revert changes with Log
+###7 Revert changes with Log
 
 By using ***revert*** the outcomes obtained will be very similar as using the command ***reset***. However, the log is not going to be *"reverted"* so it will be logged as a new commit in the historical.
 >In order to revert to a current committed point you should need the Hash.
 	
 	git revert commit-hash
 
-###2.8 Cherry-Picking specific Commits
+###8 Cherry-Picking specific Commits
 
 Cherry picking in git means to choose a commit from one branch and apply it onto another.
 This is in contrast with other ways such as merge and rebase which normally applies many commits onto a another branch.
@@ -125,7 +121,7 @@ It is handy if you're on a different branch for any reason but still need that s
 >For further explanation you could read the following link:  https://ariejan.net/2010/06/10/cherry-picking-specific-commits-from-another-branch/
 	
 
-###2.9 Differences between revert, checkout and reset
+###9 Differences between revert, checkout and reset
 
 These three commands have entirely different purposes.
 
@@ -135,7 +131,7 @@ These three commands have entirely different purposes.
 
 - **git reset** This command is a little more complicated. It actually does a couple of different things depending on how it is invoked. It modifies the index (the so-called "staging area"). Or it changes which commit a branch head is currently pointing at. This command may alter existing history (by changing the commit that a branch references).
 
-##3. References
+##10. References
 
 - Tutorial on youtube with a very detailed information: https://www.youtube.com/watch?v=FdZecVxzJbk
 - Lecture related to this topic: https://davidzych.com/difference-between-git-reset-soft-mixed-and-hard/
