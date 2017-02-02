@@ -44,7 +44,7 @@ Type *":wq"* to write and quit. This is a command from vi.
 
 ###2.4 Reset the repository to a Commit point.
 
-This is used when you want to revert the repository to a certain commit. (Similar to a Restore point)
+This is used to revert the repository to a certain commit. (Similar to a Restore point)
 The hash of the commit is needed to perform this operation.
 
 There are 3 several ways to reset the repository to a certain point: "--soft", "--mixed" and "--hard".
