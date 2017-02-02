@@ -36,13 +36,13 @@ Another methof to unstage the current state is:
 After this command, the file will be back at the same state as previous commit.
 
 
-###2 Modify the comment of previous commit
+###2 Modify the last Comment
 
 This case must be used in order to modify the message written in previous commit without alter the log history of the repository. Note that the Hash of the commit will also change after this operation.
 
 	git commit --amend -m "Override the previous comment"
 
-###3 Change Pevious Commit.
+###3 Modify the last Commit.
 
 This is used when a modification need to be done for previous commit.
 
@@ -52,7 +52,7 @@ This is used when a modification need to be done for previous commit.
 Git will prompt the committed changes and the previous comment, so it can be modified if needed.
 Type *":wq"* to write and quit. This is a command from vi.
 
-###4 Reset the repository to a Commit point.
+###4 Reset the repository.
 
 This is used to revert the repository to a certain commit. (Similar to a Restore point)
 The hash of the commit is needed to perform this operation.
@@ -70,7 +70,7 @@ The command to reset the repository is as follows:
 The differences between those parameters depend on the status of the current reset regarding the staged files.
 In some cases you want to reset totally to an specific commited branch (hard), or sometimes you need to add some more files or do some modification after do the commit again. 
 
-###5 Clean Modified files or Untracked files from Commit.
+###5 Clean files from Commit.
 
 When you use ***git status***, you see all the files untracked or modified that are not commited or pushed yet.
 Sometimes you need to remove these files from the current commit. 
