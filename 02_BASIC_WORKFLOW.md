@@ -72,6 +72,7 @@ Then you need to apply to merge changes, if your branch is derivated from develo
 For example, supose you already have a branch called "develop", then you fetch from a remote branch called "origin". 
 
 	git fetch origin develop
+	git merge origin/develop
 
 Finally, this fetch is going to be copied to your temporary **local remote-branch** that will be origin/develop. In order to merge the local branch (develop) to your fetched bracnh (origin/develop) you need to checkout your develop branch that you want to merge with the local remote branch and finally.
 
