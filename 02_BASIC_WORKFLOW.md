@@ -53,7 +53,7 @@ ej.
 
 	git remote add upstream https://github.com/octocat/Spoon-Knife
 
->Usually, the 
+>Usually, **origin** and **upstream** will be common names that you would use to configure your remote repositories. 
 
 ###1.2 Update
 
