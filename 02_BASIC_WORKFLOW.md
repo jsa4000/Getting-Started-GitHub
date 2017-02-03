@@ -15,7 +15,7 @@ When you do a **pull request** on a branch, you can continue to work on another 
 
 ###1.1 Creation
 
-In order to create a new branch, be sure you pull the changes from the _upstream_ to your master one, if it needs to be up to date.
+*In order to create a new branch, be sure you pull the changes from the _upstream_ to your master, if it needs to be up to date.*
 
 Firstly, create a branch on your local machine and switch to it. There are several ways to create them:
 
