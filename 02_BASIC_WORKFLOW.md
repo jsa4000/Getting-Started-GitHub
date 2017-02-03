@@ -52,8 +52,10 @@ Add a new remote repositoty for your branch :
 
 >	git remote add upstream https://github.com/octocat/Spoon-Knife
 
-Push changes from your commit into your branch. The new remote will be the new **upstream** you added in previuos step:
+Push your changes from your commit into your branch. The new remote will be the new **upstream** you added in previuos step:
 
+	git add .
+	git commit -m "Some message to this commit"
 	git push [name_of_your_new_remote] [name_of_your_branch]
 
 Update your branch when the original branch from official repository has been updated :
