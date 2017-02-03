@@ -3,7 +3,7 @@
 
 In this document, I will describe the basic procedure working with a distributed repository like GitHub, dealing with respositories, branches, update, commits, etc.. These guidelines will depend on the type of project and number of people you are working with.
 
-##3. GIT CONTEXT STAGE AREA vs REPOSITORY AREA
+##1. Stage Area and local area
 
 The Git directory is where Git stores the metadata and object database for your project. This is the most important part of Git, and it is what is copied when you clone a repository from another computer.
 
@@ -20,7 +20,7 @@ The basic Git workflow goes something like this:
 If a particular version of a file is in the Git directory, it’s considered committed. If it has been modified and was added to the staging area, it is staged. And if it was changed since it was checked out but has not been staged, it is modified. In Git Basics, you’ll learn more about these states and how you can either take advantage of them or skip the staged part entirely.
 
 
-##1. Branches
+##2. Branches
 
 Firstly, you must have a repository already **created**.
 
@@ -30,7 +30,7 @@ Firstly, you must have a repository already **created**.
 
 When you do a **pull request** on a branch, you can continue to work on another branch and make another pull request on this other branch.
 
-###1.1 Creation
+###2.1 Creation
 
 *In order to create a new branch, be sure you pull the changes from the _upstream_ to your master, if it needs to be up to date.*
 
@@ -72,7 +72,7 @@ ej.
 
 >Usually, **origin** and **upstream** will be common names that you would use to configure your remote repositories. 
 
-###1.2 Update
+###2.2 Update
 
 In order to do a commit from your local branch to your remote repositry, you have to use the command **push**. This command will upload your changes from your current commit. The remote repository that you would use is the new remote repository you added in previuos step (**upstream**). The main steps to perform this opeartion are:
 
@@ -91,7 +91,7 @@ Then you need to apply to merge changes, if your branch is derivated from develo
 
 	git merge [name_of_your_remote]/develop
 	
-###1.3 Local vs Remote-local Branches
+###2.3 Local vs Remote-local Branches
 	
 When you use the fetch command the changes will be on your **remote-local branches** that will differs from your **local branches**. 
 
@@ -107,7 +107,7 @@ The fetch command is going to copy the changes into a temporary **local remote-b
 ![alt text](https://git-scm.com/book/en/v2/images/remote-branches-1.png "Git Local/Remote Bracnhes")
 
 
-###1.3 Delete
+###2.3 Delete
 
 The final step, will be the removal of the branch on your **local** filesystem :
 
@@ -122,9 +122,9 @@ Finally, delete the branch on **GitHub** :
 	git push origin :[name_of_your_new_branch]
 
 
-##2. Advanced Workflows 
+##3. Advanced Workflows 
 
-###2.1 Merge vs Rebase
+###3.1 Merge vs Rebase
 
 When you use **rebase**, you tell Git to make it look as though you checked out their branch cleanly, then did all your work starting from there. That makes a clean, conceptually simple package of changes that someone can review. You can repeat this process again when there are new changes on their branch, and you will always end up with a clean set of changes "on the tip" of their branch. This will create a linear history of commits from the merged branches.
  
@@ -139,7 +139,7 @@ Once you understand what rebasing is, the most important thing to learn is when 
 >On the other hand, if you want to preserve the complete history of your project and avoid the risk of re-writing public commits, you can stick with git merge. Either option is perfectly valid, but at least now you have the option of leveraging the benefits of git rebase.
 
 
-###2.2 Differences between Git add ., git add -A,git -u /A, git add *
+###3.2 Differences between Git add ., git add -A,git -u /A, git add *
 
 In Git you can use several methods to add your files from Working Folder to the Stage area. 
 
@@ -151,7 +151,7 @@ In Git you can use several methods to add your files from Working Folder to the 
 - **Git add *** this command will add al the files untracked and modified. The deleted files since they are no more in the folder, they won't be included.
 
 
-###2.3 Pull vs Fetch
+###3.3 Pull vs Fetch
 	
 In order to update the current repository with another branch or remote repository, you need to know some different ways that will depend on your workflow or complexity of the changes you need to add or merge.
 
@@ -186,7 +186,7 @@ There are two ways to update the current branch with another, this update doesn'
 			git pull --rebase
 	
 
-##3. References
+##4. References
 
 - https://juristr.com/blog/2013/04/git-explained/
 - http://rogerdudler.github.io/git-guide/
