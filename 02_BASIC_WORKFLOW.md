@@ -1,13 +1,13 @@
 
 #Basic Workflow
 
-Firstly, you must have a Git local repository already **created**. In order to create your repository you can use one for the creation methods in the *Installatin document*.
+Firstly, you must have a Git local repository already **created**. In order to create your repository you can use one of the creation methods in the *Installation document*.
 
-The **golder rule** for every GitHub repository, is to keep your master branches clean, by clean I mean without any changes, like that you can create at any time a branch from your master. Each time, that you want to commit a bug or a feature, you need to create a branch for it, which will be a copy of your master branch.
+The **golder rule** for every GitHub repository, is to keep your master branches clean. By clean, I mean without any changes, like that you can create at any time a branch from your master. Each time, that you want to commit a bug or a feature, you need to create a branch for it, which will be a copy of your master branch.
 
-When you do a pull request on a branch, you can continue to work on another branch and make another pull request on this other branch.
+When you do a **pull request** on a branch, you can continue to work on another branch and make another pull request on this other branch.
 
-Before creating a new branch, pull the changes from upstream. Your master needs to be up to date.
+Before creating a new branch, pull the changes from **upstream--. Your master needs to be up to date.
 
 Create the branch on your local machine and switch in this branch :
 
@@ -31,9 +31,12 @@ Which will show :
 
 Add a new remote for your branch :
 
-	git remote add [name_of_your_remote] 
+	git remote add [name_of_your_remote] [url_remote_ropsitory]
+	
+>ej.
+>	git remote add upstream https://github.com/octocat/Spoon-Knife
 
-Push changes from your commit into your branch :
+Push changes from your commit into your branch. The new remote will be the new **upstream** you added in previuos step:
 
 	git push [name_of_your_new_remote] [name_of_your_branch]
 
@@ -43,7 +46,9 @@ Update your branch when the original branch from official repository has been up
 
 Then you need to apply to merge changes, if your branch is derivated from develop you need to do :
 
-	$ git merge [name_of_your_remote]/develop
+	git merge [name_of_your_remote]/develop
+	
+>When you use fetch the changes will be on your remote branches that will differs from your local branches. For example, if you have a branch called "develop" and your fetch remote is called "origin". Then, your temposary local remote branch will be origin/develop. So in order to merge the local branch called "develop" to your fetched local remote bracnh you need to checkout your develop branch you want to merge with the local remote bracn.
 
 Delete a branch on your local filesystem :
 
@@ -51,11 +56,11 @@ Delete a branch on your local filesystem :
 
 To force the deletion of local branch on your filesystem :
 
-	$ git branch -D [name_of_your_new_branch]
+	git branch -D [name_of_your_new_branch]
 
 Delete the branch on github :
 
-	$ git push origin :[name_of_your_new_branch]
+	git push origin :[name_of_your_new_branch]
 
 #12. FAQ
 
