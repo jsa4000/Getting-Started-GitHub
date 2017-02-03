@@ -1,6 +1,8 @@
 
 #Workflow
 
+In this document, I will describe the basic procedure working with a distributed repository like GitHub, dealing with respositories, branches, update, commits, etc.. These guidelines will depend on the type of project and number of people you are working with.
+
 ##1. Branches
 
 Firstly, you must have a repository already **created**.
