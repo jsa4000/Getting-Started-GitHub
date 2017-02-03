@@ -15,13 +15,13 @@ When you do a **pull request** on a branch, you can continue to work on another 
 
 >Before creating a new branch, pull the changes from **upstream--. Your master needs to be up to date.
 
-Create the branch on your local machine and switch in this branch. There are several way to create it
+Create the branch on your local machine and switch to this branch. There are several way to create it
 
-- New way
+- New way:
 
  	git checkout -b [name_of_your_new_branch]
 	
-- Old way
+- Old way:
 
  	git branch [name_of_your_new_branch]
  	git checkout newbranch
@@ -36,11 +36,11 @@ You can see all branches created by using :
 
 	git branch
 
-Which will show :
-
-	* approval_messages
- 	 master
- 	 master_clean
+>Which will show :
+>
+>	* approval_messages
+> 	 master
+> 	 master_clean
 
 Add a new remote for your branch :
 
