@@ -1,7 +1,7 @@
 
 #Basic Workflow
 
-Firstly, you must have a Git local repository already **created**. In order to create your repository you can use one for the creation methods in the ***Installatin document***.
+Firstly, you must have a Git local repository already **created**. In order to create your repository you can use one for the creation methods in the *Installatin document*.
 
 The **golder rule** for every GitHub repository, is to keep your master branches clean, by clean I mean without any changes, like that you can create at any time a branch from your master. Each time, that you want to commit a bug or a feature, you need to create a branch for it, which will be a copy of your master branch.
 
