@@ -9,7 +9,7 @@ Firstly, you must have a repository already **created**.
 
 *_In order to create your repository, you can use one of the creation methods in the [Installation document](https://github.com/jsa4000/Getting-Started-GitHub/blob/master/01_INSTALLATION.md)_*
 
-The **Golder Rule** for every GitHub repository, is to keep your master branches clean. By clean, I mean without any changes, like that you can create at any time a branch from your master. Each time, that you want to commit a bug or a feature, you need to create a branch for it, which will be a copy of your master branch.
+***The Golder Rule for every GitHub repository, is to keep your master branches clean. By clean, I mean without any changes, like that you can create at any time a branch from your master. Each time, that you want to commit a bug or a feature, you need to create a branch for it, which will be a copy of your master branch.***
 
 When you do a **pull request** on a branch, you can continue to work on another branch and make another pull request on this other branch.
 
