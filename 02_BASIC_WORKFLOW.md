@@ -118,6 +118,7 @@ When you use **merge**,  you tie the two branch histories together at this point
 Once you understand what rebasing is, the most important thing to learn is when not to do it. The **Golden Rule** of git rebase is to ***never use it on public branches***.
 
 >If you would prefer a clean, linear history free of unnecessary merge commits, you should reach for git rebase instead of git merge when integrating changes from another branch.
+>
 >On the other hand, if you want to preserve the complete history of your project and avoid the risk of re-writing public commits, you can stick with git merge. Either option is perfectly valid, but at least now you have the option of leveraging the benefits of git rebase.
 
 
