@@ -23,12 +23,12 @@ Firstly, create a branch on your local machine and switch to it. There are sever
 
 		git checkout -b [name_of_your_new_branch]
 	
-- Old way, that you have to create the branch and finally, do the checkout to that branch:
+- Old way, that you have to create the branch and finally do the checkout:
 
  		git branch [name_of_your_new_branch]
  		git checkout newbranch
 
-Secondly, push the branch onto GitHub. (_In order to commit something in your branch, be sure to be in your branch_).
+Secondly, push the branch onto GitHub. (_In order to commit something in your branch, be sure to be inside_).
 
 	git push origin [name_of_your_new_branch]
 
