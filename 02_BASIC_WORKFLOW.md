@@ -1,67 +1,9 @@
 
-Follow this links to basic Workflow:
+#Basic Workflow
 
-https://juristr.com/blog/2013/04/git-explained/
-http://rogerdudler.github.io/git-guide/
-https://es.atlassian.com/git/tutorials/svn-to-git-prepping-your-team-migration
-https://git-scm.com/book/en/v2/Getting-Started-Git-Basics
-https://blog.udemy.com/git-tutorial-a-comprehensive-guide/
+Firstly, you must have a Git local repository already created. In order to create your repository you can use one for the creation methods in the Installatin document.
 
-
-#5. UDATE THE CONTENT FROM THE SERVER (PULL vs FETCH)
-	
-	
-In order to update the current repository with another branch or remote repository, you need to know some different ways that will depend on your workflow or complexity of the changes you need to add or merge.
-
-There are two ways to update the current branch with another, this update doesn't necesary mean, the changes will be automatically be merged. In this case, you have to decide if first you want to see the diffs or let Git to merge automatically the changes.
-
-Rebase will mean the changes that are retrieved from the remote server are firstly taken into consideration. So the merge are done upon this update opeation.
-
-Runs git-pull means Fetch from and Merge with another repository or a local branch.	With --rebase, calls git-rebase instead of git-merge.
-
-Runs git-fetch with the given parameters, and calls git-merge to merge the retrieved head(s) into the current branch. 
-
-
-In the simplest terms, git pull does a git fetch followed by a git merge. Fetch it's a more controlled way to see the changes prior to merge, if it's necessary or make sense.
-
-	
-	Simple Workflow to update a repository using pull:
-		git pull origin master
-		git checkout foo-branch
-		git rebase master
-		git push origin foo-branch
-	
-	Simple Workflow to update a repository using fetch:
-	
-		- git checkout master                                                  
-		- git fetch                                        
-		- git diff origin/master
-		- git rebase origin master
-
-	Some people claims that the most useful way to update the respository is doinf the following:
-	
-		git pull --rebase
-
-		
-git checkout -b iss53		
-		
-	
-
-#8. BRANCHES FROM REPOSITORY
-
-
->>old way
-git branch newbranch
-git checkout newbranch
-
->>new way
-git checkout -b newbranch
-	
-
-#11. BASIC WORKFLOW
-
-
-In your github fork, you need to keep your master branch clean, by clean I mean without any changes, like that you can create at any time a branch from your master. Each time, that you want to commit a bug or a feature, you need to create a branch for it, which will be a copy of your master branch.
+The golder rule for every GitHub repository, is to keep your master branches clean, by clean I mean without any changes, like that you can create at any time a branch from your master. Each time, that you want to commit a bug or a feature, you need to create a branch for it, which will be a copy of your master branch.
 
 When you do a pull request on a branch, you can continue to work on another branch and make another pull request on this other branch.
 
@@ -132,6 +74,59 @@ However you can specify a folder after the sentence, "git add -A /my_folder"
 
 
 
+#5. UDATE THE CONTENT FROM THE SERVER (PULL vs FETCH)
+	
+	
+In order to update the current repository with another branch or remote repository, you need to know some different ways that will depend on your workflow or complexity of the changes you need to add or merge.
+
+There are two ways to update the current branch with another, this update doesn't necesary mean, the changes will be automatically be merged. In this case, you have to decide if first you want to see the diffs or let Git to merge automatically the changes.
+
+Rebase will mean the changes that are retrieved from the remote server are firstly taken into consideration. So the merge are done upon this update opeation.
+
+Runs git-pull means Fetch from and Merge with another repository or a local branch.	With --rebase, calls git-rebase instead of git-merge.
+
+Runs git-fetch with the given parameters, and calls git-merge to merge the retrieved head(s) into the current branch. 
+
+
+In the simplest terms, git pull does a git fetch followed by a git merge. Fetch it's a more controlled way to see the changes prior to merge, if it's necessary or make sense.
+
+	
+	Simple Workflow to update a repository using pull:
+		git pull origin master
+		git checkout foo-branch
+		git rebase master
+		git push origin foo-branch
+	
+	Simple Workflow to update a repository using fetch:
+	
+		- git checkout master                                                  
+		- git fetch                                        
+		- git diff origin/master
+		- git rebase origin master
+
+	Some people claims that the most useful way to update the respository is doinf the following:
+	
+		git pull --rebase
+
+		
+git checkout -b iss53		
+		
+	
+
+#8. BRANCHES FROM REPOSITORY
+
+
+>>old way
+git branch newbranch
+git checkout newbranch
+
+>>new way
+git checkout -b newbranch
+	
+
+
+
+
 Merge vs Rebase
 
 When you rebase your branch onto their branch, you tell Git to make it look as though you checked out their branch cleanly, then did all your work starting from there. That makes a clean, conceptually simple package of changes that someone can review. You can repeat this process again when there are new changes on their branch, and you will always end up with a clean set of changes "on the tip" of their branch.
@@ -156,7 +151,13 @@ On the other hand, if you want to preserve the complete history of your project 
 
 
 
+##References
 
+- https://juristr.com/blog/2013/04/git-explained/
+- http://rogerdudler.github.io/git-guide/
+- https://es.atlassian.com/git/tutorials/svn-to-git-prepping-your-team-migration
+- https://git-scm.com/book/en/v2/Getting-Started-Git-Basics
+- https://blog.udemy.com/git-tutorial-a-comprehensive-guide/
 
  
 
