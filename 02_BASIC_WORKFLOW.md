@@ -13,11 +13,11 @@ The **Golder Rule** for every GitHub repository, is to keep your master branches
 
 When you do a **pull request** on a branch, you can continue to work on another branch and make another pull request on this other branch.
 
-###1.1 Branch creation
+###1.1 Creation
 
->Before creating a new branch, pull the changes from **upstream--. Your master needs to be up to date.
+In order to create a new branch, be sure you pull the changes from the up stream to your if it needs to be up to date.
 
-Create a branch on your local machine and switch to it. There are several ways to create them.
+Firstly, create a branch on your local machine and switch to it. There are several ways to create them:
 
 - New way that automatically creates the branch and do the checkout:
 
@@ -28,31 +28,36 @@ Create a branch on your local machine and switch to it. There are several ways t
  		git branch [name_of_your_new_branch]
  		git checkout newbranch
 
-Push the branch onto GitHub (_In order to commit something in your branch, be sure to be in your branch_) :
+Secondly, push the branch onto GitHub. (_In order to commit something in your branch, be sure to be in your branch_).
 
 	git push origin [name_of_your_new_branch]
-
 
 
 You can see all branches created by using :
 
 	git branch
 
-Which will show :
+ Which will show :
 
->	* approval_messages
+ >	* approval_messages
+ 
+ > 	 master
+ 
+ > 	 master_clean
 
-> 	 master
-
-> 	 master_clean
-
-Add a new remote repositoty for your branch :
+Finally, **add** a new **remote repositoty** to your new branch. This remote repository will be used to fetch (_update_) or commit (_pull-request_) depending on your needs.
 
 	git remote add [name_of_your_remote] [url_remote_ropsitory]
 	
->ej.	git remote add upstream https://github.com/octocat/Spoon-Knife
+ej.
 
-Push your changes from your commit into your branch. The new remote will be the new **upstream** you added in previuos step:
+	git remote add upstream https://github.com/octocat/Spoon-Knife
+
+>Usually, the 
+
+###1.2 Update
+
+In order to commits your changes from your local bracnh to your remote repositry, you have to **push** your changes from your current commit. The remote repository will be the new **upstream** you added in previuos step:
 
 	git checkout develop
 	git add .
