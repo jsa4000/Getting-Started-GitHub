@@ -3,16 +3,17 @@
 
 ##1. Branches
 
-Firstly, you must have a repository already **created**. In order to create your repository, you can use one of the creation methods in the [Installation document](https://github.com/jsa4000/Getting-Started-GitHub/blob/master/01_INSTALLATION.md)
+Firstly, you must have a repository already **created**.
 
-The **golder rule** for every GitHub repository, is to keep your master branches clean. By clean, I mean without any changes, like that you can create at any time a branch from your master. Each time, that you want to commit a bug or a feature, you need to create a branch for it, which will be a copy of your master branch.
+>In order to create your repository, you can use one of the creation methods in the [Installation document](https://github.com/jsa4000/Getting-Started-GitHub/blob/master/01_INSTALLATION.md)
+
+The **Golder Rule** for every GitHub repository, is to keep your master branches clean. By clean, I mean without any changes, like that you can create at any time a branch from your master. Each time, that you want to commit a bug or a feature, you need to create a branch for it, which will be a copy of your master branch.
 
 When you do a **pull request** on a branch, you can continue to work on another branch and make another pull request on this other branch.
 
-
 ###1.1 Branch creation
 
-Before creating a new branch, pull the changes from **upstream--. Your master needs to be up to date.
+>Before creating a new branch, pull the changes from **upstream--. Your master needs to be up to date.
 
 Create the branch on your local machine and switch in this branch. There are several way to create it
 
