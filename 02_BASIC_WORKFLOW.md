@@ -19,13 +19,12 @@ Create the branch on your local machine and switch to this branch. There are sev
 
 - New way:
 
- 	git checkout -b [name_of_your_new_branch]
+		git checkout -b [name_of_your_new_branch]
 	
 - Old way:
 
- 	git branch [name_of_your_new_branch]
-	
- 	git checkout newbranch
+ 		git branch [name_of_your_new_branch]
+ 		git checkout newbranch
 
 Push the branch on github :
 
