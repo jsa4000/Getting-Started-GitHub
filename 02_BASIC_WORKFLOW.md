@@ -82,7 +82,7 @@ For example, supose you already have a branch called _"develop"_, then you fetch
 
 	git fetch origin develop
 
-The fetch command is going to copy the changes into a temporary **local remote-branch** that will be called _"origin/develop"_. In order to merge the local branch (_"develop"_) to your fetched bracnh (_"origin/develop"_) you need to firstly do a checkout to your _"develop"_ branch.
+The fetch command is going to copy the changes into a temporary **local remote-branch** that will be called _"origin/develop"_. In order to merge the local branch (_"develop"_) to your fetched branch (_"origin/develop"_) you need to firstly do a checkout to your _"develop"_ branch.
 
 	git checkout develop
 	git merge origin/develop
