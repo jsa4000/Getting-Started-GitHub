@@ -125,14 +125,12 @@ Once you understand what rebasing is, the most important thing to learn is when 
 
 In Git you can use several methods to add your files from Working Folder to the Stage area. 
 
-	- *Git add -A* this command will add all the files that are untracked, deleted or modified. This will look at all the files that are locally in the repository independently of the folder you are.  However you can specify a folder after the sentence, 
-		"git add -A /my_folder"  
+- *Git add -A* this command will add all the files that are untracked, deleted or modified. This will look at all the files that are locally in the repository independently of the folder you are.  However you can specify a folder after the sentence, 
+	"git add -A /my_folder"  
 
-	- *Git add .* this command will add all the files (untracked, deleted or modified) that are inside the current folder and subfolders.
+- *Git add .* this command will add all the files (untracked, deleted or modified) that are inside the current folder and subfolders.
 
-	- *Git add ** this command will add al the files untracked and modified. The deleted files since they are no more in the folder, they won't be included.
-
-
+- *Git add ** this command will add al the files untracked and modified. The deleted files since they are no more in the folder, they won't be included.
 
 
 ###2.3 Pull vs Fetch
@@ -143,30 +141,29 @@ There are two ways to update the current branch with another, this update doesn'
 
 Rebase will mean the changes that are retrieved from the remote server are firstly taken into consideration. So the merge are done upon this update opeation.
 
-Runs git-pull means Fetch from and Merge with another repository or a local branch.	With --rebase, calls git-rebase instead of git-merge.
+Runs **git-pull** means Fetch from and Merge with another repository or a local branch.	With --rebase, calls git-rebase instead of git-merge.
 
-Runs git-fetch with the given parameters, and calls git-merge to merge the retrieved head(s) into the current branch. 
-
+Runs **git-fetch** with the given parameters, and calls git-merge to merge the retrieved head(s) into the current branch. 
 
 In the simplest terms, git pull does a git fetch followed by a git merge. Fetch it's a more controlled way to see the changes prior to merge, if it's necessary or make sense.
 
 	
-	Simple Workflow to update a repository using pull:
-		git pull origin master
-		git checkout foo-branch
-		git rebase master
-		git push origin foo-branch
+- Simple Workflow to update a repository using pull:
+	git pull origin master
+	git checkout foo-branch
+	git rebase master
+	git push origin foo-branch
 	
-	Simple Workflow to update a repository using fetch:
+- Simple Workflow to update a repository using fetch:
 	
-		- git checkout master                                                  
-		- git fetch                                        
-		- git diff origin/master
-		- git rebase origin master
+	git checkout master                                                  
+	git fetch                                        
+	git diff origin/master
+	git rebase origin master
 
-	Some people claims that the most useful way to update the respository is doinf the following:
-	
-		git pull --rebase
+>Some people claims that the most useful way to update the respository is doinf the following:
+>	
+>		git pull --rebase
 
 		
 git checkout -b iss53		
