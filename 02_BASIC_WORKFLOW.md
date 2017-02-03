@@ -146,7 +146,7 @@ Runs **git-pull** means Fetch from and Merge with another repository or a local 
 
 Runs **git-fetch** with the given parameters, and calls git-merge to merge the retrieved head(s) into the current branch. 
 
-In the simplest terms, git pull does a git fetch followed by a git merge. Fetch it's a more controlled way to see the changes prior to merge, if it's necessary or make sense.
+>In the simplest terms, **git pull** does a **git fetch** followed by a **git merge**. Fetch it's a more **controlled** way to see the changes prior to do the merge operation.
 	
 - Simple Workflow to update a repository using pull:
 
