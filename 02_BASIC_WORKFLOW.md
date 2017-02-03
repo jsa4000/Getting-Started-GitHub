@@ -36,8 +36,8 @@ You can see all branches created by using :
 
 	git branch
 
->Which will show :
->
+Which will show :
+
 >	* approval_messages
 > 	 master
 > 	 master_clean
@@ -47,6 +47,7 @@ Add a new remote for your branch :
 	git remote add [name_of_your_remote] [url_remote_ropsitory]
 	
 >ej.
+
 >	git remote add upstream https://github.com/octocat/Spoon-Knife
 
 Push changes from your commit into your branch. The new remote will be the new **upstream** you added in previuos step:
