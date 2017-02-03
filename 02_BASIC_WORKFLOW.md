@@ -1,5 +1,7 @@
 
-#Basic Workflow
+#Workflow
+
+##1. Basic Workflow
 
 Firstly, you must have a repository already **created**. In order to create your repository, you can use one of the creation methods in the [Installation document](https://github.com/jsa4000/Getting-Started-GitHub/blob/master/01_INSTALLATION.md)
 
@@ -62,9 +64,8 @@ Delete the branch on github :
 
 	git push origin :[name_of_your_new_branch]
 
-#12. FAQ
 
-##12.1 Differences between Git add ., git add -A,git -u /A, git add *
+##2. Differences between Git add ., git add -A,git -u /A, git add *
 
 In Git you can use several methods to add your files from Working Folder to the Stage area. 
 
