@@ -17,11 +17,11 @@ When you do a **pull request** on a branch, you can continue to work on another 
 
 Create a branch on your local machine and switch to it. There are several ways to create them.
 
-- New way:
+- New way that automatically creates the branch and do the checkout:
 
 		git checkout -b [name_of_your_new_branch]
 	
-- Old way:
+- Old way, that you have to first, create the bracnh and finally, do the checkout to that branch:
 
  		git branch [name_of_your_new_branch]
  		git checkout newbranch
@@ -39,7 +39,9 @@ You can see all branches created by using :
 Which will show :
 
 >	* approval_messages
+>
 > 	 master
+>
 > 	 master_clean
 
 Add a new remote for your branch :
