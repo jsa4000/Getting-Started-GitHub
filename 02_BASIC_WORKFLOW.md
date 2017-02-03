@@ -140,11 +140,11 @@ In order to update the current repository with another branch or remote reposito
 
 There are two ways to update the current branch with another, this update doesn't necesary mean that the changes will be automatically merged. So, you have to decide if you want to see the differencess (dif) first or let Git to merge automatically the changes.
 
-Runs **git-pull** means Fetch from and Merge with another repository or a local branch.	With --rebase, calls git-rebase instead of git-merge.
+- Runs **git-pull** means Fetch from and Merge with another repository or a local branch.	With --rebase, calls git-rebase instead of git-merge.
 
-> Rebase will mean the changes that are retrieved from the remote server are firstly taken into consideration. So the merge are done upon this update opeation.
+ > Rebase will mean the changes that are retrieved from the remote server are firstly taken into consideration. So the merge are done upon this update opeation.
 
-Runs **git-fetch** with the given parameters, and calls git-merge to merge the retrieved head(s) into the current branch. 
+- Runs **git-fetch** with the given parameters, and calls git-merge to merge the retrieved head(s) into the current branch. 
 
 >In the simplest terms, **git pull** does a **git fetch** followed by a **git merge**. Fetch it's a more **controlled** way to see the changes prior to do the merge operation.
 	
