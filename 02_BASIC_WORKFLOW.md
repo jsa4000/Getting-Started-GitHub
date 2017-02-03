@@ -61,7 +61,7 @@ Then you need to apply to merge changes, if your branch is derivated from develo
 
 	git merge [name_of_your_remote]/develop
 	
->When you use fetch the changes will be on your remote branches that will differs from your local branches. For example, if you have a branch called "develop" and your fetch remote is called "origin". Then, your temposary local remote branch will be origin/develop. So in order to merge the local branch called "develop" to your fetched local remote bracnh you need to checkout your develop branch you want to merge with the local remote bracn.
+>When you use the fetch command the changes will be on your **remote local branches** that will differs from your local branches. For example, if you have a branch called "develop" and your fetch remote is called "origin". Then, your temposary local remote branch will be origin/develop. So in order to merge the local branch called "develop" to your fetched local remote bracnh you need to checkout your develop branch you want to merge with the local remote bracn.
 
 Delete a branch on your local filesystem :
 
