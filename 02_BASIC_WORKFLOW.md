@@ -140,7 +140,9 @@ In order to update the current repository with another branch or remote reposito
 
 There are two ways to update the current branch with another, this update doesn't necesary mean that the changes will be automatically merged. So, you have to decide if you want to see the differencess (dif) first or let Git to merge automatically the changes.
 
-- Runs **git-pull** means Fetch from and Merge with another repository or a local branch.	With --rebase, calls git-rebase instead of git-merge.
+- Runs **git-pull** means Fetch from and Merge with another repository or a local branch.
+ 
+ > With --rebase, calls git-rebase instead of git-merge.
 
  > Rebase will mean the changes that are retrieved from the remote server are firstly taken into consideration. So the merge are done upon this update opeation.
 
@@ -162,9 +164,9 @@ There are two ways to update the current branch with another, this update doesn'
 			git diff origin/master
 			git rebase origin master
 
->Sometimes the fastest way to update the respository is just by using the following command:
->	
->		git pull --rebase
+ - Fastest way to update the respositor by usung pull and --rebase:
+	
+			git pull --rebase
 	
 
 ##3. References
