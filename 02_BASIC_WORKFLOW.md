@@ -164,7 +164,7 @@ There are two ways to update the current branch with another, this update doesn'
 			git diff origin/master
 			git rebase origin master
 
- - Fastest way to update the respositor by usung pull and --rebase:
+- Fastest way to update the respositor by usung pull and --rebase:
 	
 			git pull --rebase
 	
