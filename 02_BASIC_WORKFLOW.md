@@ -82,7 +82,7 @@ For example, supose you already have a branch called _"develop"_, then you fetch
 
 	git fetch origin develop
 
-The fetch command is going to copy the changes into a temporary **local remote-branch** that will be called _"origin/develop"_. In order to merge the local branch (_"develop"_) to your fetched branch (_"origin/develop"_) you need to firstly do a checkout to your _"develop"_ branch.
+The fetch command is going to copy the changes into a temporary **local remote-branch** that will be called _"origin/develop"_. In order to merge your fetched branch (_"origin/develop"_) to the current branch (_"develop"_) yo have to use the following commands:
 
 	git checkout develop
 	git merge origin/develop
@@ -92,11 +92,11 @@ The fetch command is going to copy the changes into a temporary **local remote-b
 
 ###1.3 Delete
 
-The final step, is going to be deleting the branch on your **local** filesystem :
+The final step, will be the removal of the branch on your **local** filesystem :
 
 	git branch -d [name_of_your_new_branch]
 
-To force the deletion of local branch on your filesystem use instead _"-D"_ :
+To force the deletion of a local branch, use instead _"-D"_ :
 
 	git branch -D [name_of_your_new_branch]
 
@@ -105,37 +105,37 @@ Finally, delete the branch on **GitHub** :
 	git push origin :[name_of_your_new_branch]
 
 
-###2 Merge vs Rebase
+##2. Advanced Workflows 
 
-When you **rebase** your branch onto their branch, you tell Git to make it look as though you checked out their branch cleanly, then did all your work starting from there. That makes a clean, conceptually simple package of changes that someone can review. You can repeat this process again when there are new changes on their branch, and you will always end up with a clean set of changes "on the tip" of their branch.
+###2.1 Merge vs Rebase
+
+When you use **rebase**, you tell Git to make it look as though you checked out their branch cleanly, then did all your work starting from there. That makes a clean, conceptually simple package of changes that someone can review. You can repeat this process again when there are new changes on their branch, and you will always end up with a clean set of changes "on the tip" of their branch. This will create a linear history of commits from the merged branches.
  
-When you **merge** their branch into your branch, you tie the two branch histories together at this point. If you do this again later with more changes, you begin to create an interleaved thread of histories: some of their changes, some of my changes, some of their changes. Some people find this messy or undesirable.
+When you use **merge**,  you tie the two branch histories together at this point. If you do this again later with more changes, you begin to create an interleaved thread of histories: some of their changes, some of my changes, some of their changes. Some people find this messy or undesirable.
 
 ![alt text](http://hostingadvice.digitalbrandsinc.netdna-cdn.com/wp-content/uploads/2014/12/git-merge.gif "Git Merge vs Rebase")
 
-Once you understand what rebasing is, the most important thing to learn is when not to do it. The golden rule of git rebase is to never use it on public branches.
+Once you understand what rebasing is, the most important thing to learn is when not to do it. The **Golden Rule** of git rebase is to ***never use it on public branches***.
 
 >If you would prefer a clean, linear history free of unnecessary merge commits, you should reach for git rebase instead of git merge when integrating changes from another branch.
 >On the other hand, if you want to preserve the complete history of your project and avoid the risk of re-writing public commits, you can stick with git merge. Either option is perfectly valid, but at least now you have the option of leveraging the benefits of git rebase.
 
 
-##2. Differences between Git add ., git add -A,git -u /A, git add *
+###2.2 Differences between Git add ., git add -A,git -u /A, git add *
 
 In Git you can use several methods to add your files from Working Folder to the Stage area. 
 
-"Git add -A", will add all the files that are untracked, deleted or modified. This will look at all the files that are locally in the repository independently of the folder you are. 
-However you can specify a folder after the sentence, "git add -A /my_folder"  
+	- *Git add -A* this command will add all the files that are untracked, deleted or modified. This will look at all the files that are locally in the repository independently of the folder you are.  However you can specify a folder after the sentence, 
+		"git add -A /my_folder"  
 
-"Git add ." will add all the files (untracked, deleted or modified) that are inside the current folder and subfolders.
+	- *Git add .* this command will add all the files (untracked, deleted or modified) that are inside the current folder and subfolders.
 
-
-"Git add *" will add al the files untracked and modified. The deleted files since they are no more in the folder, they won't be included.
-
+	- *Git add ** this command will add al the files untracked and modified. The deleted files since they are no more in the folder, they won't be included.
 
 
 
-#5. UDATE THE CONTENT FROM THE SERVER (PULL vs FETCH)
-	
+
+###2.3 Pull vs Fetch
 	
 In order to update the current repository with another branch or remote repository, you need to know some different ways that will depend on your workflow or complexity of the changes you need to add or merge.
 
@@ -172,7 +172,7 @@ In the simplest terms, git pull does a git fetch followed by a git merge. Fetch 
 git checkout -b iss53		
 		
 
-##References
+##3. References
 
 - https://juristr.com/blog/2013/04/git-explained/
 - http://rogerdudler.github.io/git-guide/
