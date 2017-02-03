@@ -39,9 +39,9 @@ You can see all branches created by using :
 
  Which will show :
 
-  >	* approval_messages
-  > 	 master
-  > 	 master_clean
+  >	approval_messages
+  > 	master
+  > 	master_clean
 
 Finally, **add** a new **remote repositoty** to your new branch. This remote repository will be used to fetch (_update_) or commit (_pull-request_) depending on your needs.
 
