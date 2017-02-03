@@ -15,7 +15,7 @@ When you do a **pull request** on a branch, you can continue to work on another 
 
 >Before creating a new branch, pull the changes from **upstream--. Your master needs to be up to date.
 
-Create the branch on your local machine and switch to this branch. There are several way to create it
+Create the branch on your local machine and switch to this branch. There are several way to create it.
 
 - New way:
 
@@ -24,6 +24,7 @@ Create the branch on your local machine and switch to this branch. There are sev
 - Old way:
 
  	git branch [name_of_your_new_branch]
+	
  	git checkout newbranch
 
 Push the branch on github :
