@@ -30,7 +30,7 @@ Push the branch on github :
 
 	git push origin [name_of_your_new_branch]
 
->**In order to commit something in your branch, be sure to be in your branch. **
+In order to commit something in your branch, be sure to be in your branch.
 
 You can see all branches created by using :
 
