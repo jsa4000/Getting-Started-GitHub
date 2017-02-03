@@ -48,15 +48,16 @@ Add a new remote repositoty for your branch :
 
 	git remote add [name_of_your_remote] [url_remote_ropsitory]
 	
->ej.
-
->	git remote add upstream https://github.com/octocat/Spoon-Knife
+>ej.	git remote add upstream https://github.com/octocat/Spoon-Knife
 
 Push your changes from your commit into your branch. The new remote will be the new **upstream** you added in previuos step:
 
+	git checkout develop
 	git add .
 	git commit -m "Some message to this commit"
 	git push [name_of_your_new_remote] [name_of_your_branch]
+	
+>ej.	git push upstream develop
 
 Update your branch when the original branch from official repository has been updated :
 
