@@ -165,10 +165,7 @@ In the simplest terms, git pull does a git fetch followed by a git merge. Fetch 
 >Some people claims that the most useful way to update the respository is doinf the following:
 >	
 >		git pull --rebase
-
-		
-git checkout -b iss53		
-		
+	
 
 ##3. References
 
