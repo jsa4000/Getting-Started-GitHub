@@ -57,7 +57,7 @@ ej.
 
 ###1.2 Update
 
-In order to commits your changes from your local bracnh to your remote repositry, you have to **push** your changes from your current commit. The remote repository will be the new **upstream** you added in previuos step:
+In order to do a commit from your local branch to your remote repositry, you have to use the command **push**. This command will upload your changes from your current commit. The remote repository that you would use is the new remote repository you added in previuos step (**upstream**). The main steps to perform this opeartion are:
 
 	git checkout develop
 	git add .
