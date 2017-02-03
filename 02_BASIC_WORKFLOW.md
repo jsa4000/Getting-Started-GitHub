@@ -39,12 +39,12 @@ You can see all branches created by using :
 Which will show :
 
 >	* approval_messages
->
+
 > 	 master
->
+
 > 	 master_clean
 
-Add a new remote for your branch :
+Add a new remote repositoty for your branch :
 
 	git remote add [name_of_your_remote] [url_remote_ropsitory]
 	
