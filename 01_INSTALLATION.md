@@ -1,6 +1,6 @@
 #Installation
 
-##1. Installing Git
+##1. Git Installation
 
 Depending on the OS are you using: Linux, Microsoft Windows or MacOS you will need to use a different Setup to correctly install Git into the machine.
 Also, Git provides two ways of managing the repositories. One is by using the **command line** (by using standard Unix Bash or standard Cmd on Windows) and the other one, is by using another tool with a **graphical interface**. However, some of the functionality couldn't be implemented. In most of the cases solving an error or a conflict requires to switch to the command interface.
