@@ -151,17 +151,17 @@ In the simplest terms, git pull does a git fetch followed by a git merge. Fetch 
 	
 - Simple Workflow to update a repository using pull:
 
-	git pull origin master
-	git checkout foo-branch
-	git rebase master
-	git push origin foo-branch
+			git pull origin master
+			git checkout foo-branch
+			git rebase master
+			git push origin foo-branch
 	
 - Simple Workflow to update a repository using fetch:
 	
-	git checkout master                                                  
-	git fetch                                        
-	git diff origin/master
-	git rebase origin master
+			git checkout master                                                  
+			git fetch                                        
+			git diff origin/master
+			git rebase origin master
 
 >Some people claims that the most useful way to update the respository is doinf the following:
 >	
