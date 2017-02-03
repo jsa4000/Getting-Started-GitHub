@@ -19,11 +19,11 @@ When you do a **pull request** on a branch, you can continue to work on another 
 
 Firstly, create a branch on your local machine and switch to it. There are several ways to create them:
 
-- New way that automatically creates the branch and do the checkout:
+- New way, that automatically creates the branch and do the checkout:
 
 		git checkout -b [name_of_your_new_branch]
 	
-- Old way, that you have to first, create the bracnh and finally, do the checkout to that branch:
+- Old way, that you have to create the branch and finally, do the checkout to that branch:
 
  		git branch [name_of_your_new_branch]
  		git checkout newbranch
