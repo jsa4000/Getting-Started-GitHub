@@ -138,16 +138,15 @@ In Git you can use several methods to add your files from Working Folder to the 
 	
 In order to update the current repository with another branch or remote repository, you need to know some different ways that will depend on your workflow or complexity of the changes you need to add or merge.
 
-There are two ways to update the current branch with another, this update doesn't necesary mean, the changes will be automatically be merged. In this case, you have to decide if first you want to see the diffs or let Git to merge automatically the changes.
-
-Rebase will mean the changes that are retrieved from the remote server are firstly taken into consideration. So the merge are done upon this update opeation.
+There are two ways to update the current branch with another, this update doesn't necesary mean that the changes will be automatically merged. So, you have to decide if you want to see the differencess (dif) first or let Git to merge automatically the changes.
 
 Runs **git-pull** means Fetch from and Merge with another repository or a local branch.	With --rebase, calls git-rebase instead of git-merge.
+
+> Rebase will mean the changes that are retrieved from the remote server are firstly taken into consideration. So the merge are done upon this update opeation.
 
 Runs **git-fetch** with the given parameters, and calls git-merge to merge the retrieved head(s) into the current branch. 
 
 In the simplest terms, git pull does a git fetch followed by a git merge. Fetch it's a more controlled way to see the changes prior to merge, if it's necessary or make sense.
-
 	
 - Simple Workflow to update a repository using pull:
 
