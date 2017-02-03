@@ -19,11 +19,11 @@ When you do a **pull request** on a branch, you can continue to work on another 
 
 Firstly, create a branch on your local machine and switch to it. There are several ways to create them:
 
-- New way, that automatically creates the branch and do the checkout:
+- New way, that automatically creates a branch and do the checkout:
 
 		git checkout -b [name_of_your_new_branch]
 	
-- Old way, that you have to create the branch and finally do the checkout:
+- Old way, that you have to create a branch and finally do the checkout:
 
  		git branch [name_of_your_new_branch]
  		git checkout newbranch
@@ -74,33 +74,38 @@ Then you need to apply to merge changes, if your branch is derivated from develo
 
 	git merge [name_of_your_remote]/develop
 	
->When you use the fetch command the changes will be on your **remote-local branches** that will differs from your **local branches**. 
+###1.3 Local vs Remote-local Branches
+	
+When you use the fetch command the changes will be on your **remote-local branches** that will differs from your **local branches**. 
 
-For example, supose you already have a branch called "develop", then you fetch from a remote branch called "origin". 
+For example, supose you already have a branch called _"develop"_, then you fetch from a remote branch called _"origin"_. 
 
 	git fetch origin develop
 
-Finally, this fetch is going to be copied to your temporary **local remote-branch** that will be origin/develop. In order to merge the local branch (develop) to your fetched bracnh (origin/develop) you need to checkout your develop branch that you want to merge with the local remote branch and finally.
+The fetch command is going to copy the changes into a temporary **local remote-branch** that will be called _"origin/develop"_. In order to merge the local branch (_"develop"_) to your fetched bracnh (_"origin/develop"_) you need to firstly do a checkout to your _"develop"_ branch.
 
+	git checkout develop
 	git merge origin/develop
 
 ![alt text](https://git-scm.com/book/en/v2/images/remote-branches-1.png "Git Local/Remote Bracnhes")
 
 
-Delete a branch on your local filesystem :
+###1.3 Delete
+
+The final step, is going to be deleting the branch on your **local** filesystem :
 
 	git branch -d [name_of_your_new_branch]
 
-To force the deletion of local branch on your filesystem :
+To force the deletion of local branch on your filesystem use instead _"-D"_ :
 
 	git branch -D [name_of_your_new_branch]
 
-Delete the branch on github :
+Finally, delete the branch on **GitHub** :
 
 	git push origin :[name_of_your_new_branch]
 
 
-###1.2 Merge vs Rebase
+###2 Merge vs Rebase
 
 When you rebase your branch onto their branch, you tell Git to make it look as though you checked out their branch cleanly, then did all your work starting from there. That makes a clean, conceptually simple package of changes that someone can review. You can repeat this process again when there are new changes on their branch, and you will always end up with a clean set of changes "on the tip" of their branch.
  
