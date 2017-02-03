@@ -162,7 +162,7 @@ In the simplest terms, git pull does a git fetch followed by a git merge. Fetch 
 			git diff origin/master
 			git rebase origin master
 
->Some people claims that the most useful way to update the respository is doinf the following:
+>Sometimes the fastest way to update the respository is just by using the following command:
 >	
 >		git pull --rebase
 	
