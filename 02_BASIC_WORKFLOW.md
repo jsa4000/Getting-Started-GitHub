@@ -17,7 +17,14 @@ The basic Git workflow goes something like this:
 
 - You modify files in your working tree.
 - You stage the files, adding snapshots of them to your staging area.
+		
+		git add file.txt
+		git add .
+
+
 - You do a commit, which takes the files as they are in the staging area and stores that snapshot permanently to your Git directory.
+
+		git commit -m "Some message"
 
 If a particular version of a file is in the Git directory, it’s considered committed. If it has been modified and was added to the staging area, it is staged. And if it was changed since it was checked out but has not been staged, it is modified. In Git Basics, you’ll learn more about these states and how you can either take advantage of them or skip the staged part entirely.
 
