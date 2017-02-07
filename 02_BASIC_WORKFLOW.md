@@ -87,7 +87,7 @@ ej.
 
 ###2.2 Commit
 
-In order to do a commit from your local branch to your remote repositry, you have to use the command **push**. This command will upload your changes from your current commit. The remote repository that you would use is the new remote repository you added in previuos step (**upstream**). The main steps to perform this opeartion are:
+In order to do a commit and finally push local changes (branch) to your remote repository, you have to use the command **push**. This command will upload the commited changes of your current bracnh. The remote repository will be the new remote repository you added in previuos step (**upstream**). The main steps to perform this opeartion are:
 
 	git checkout develop
 	git add .
@@ -142,7 +142,8 @@ The fetch command is going to copy the changes into a temporary **local remote-b
 	
 ###2.5 Tagging
 
-It's recommended to create tags for software releases. this is a known concept, which also exists in SVN. You can create a new tag named 1.0.0 by executing
+It's recommended to create tags for software releases. this is a known concept, which also exists in SVN. You can create a new tag named _1.0.0_ by executing:
+
 	git tag 1.0.0 1b2e1d63ff
 
 >the 1b2e1d63ff stands for the first 10 characters of the commit id you want to reference with your tag. You can get the commit id by looking at the... 
