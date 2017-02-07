@@ -100,6 +100,12 @@ Then you need to apply to merge changes, if your branch is derivated from develo
 
 	git merge [name_of_your_remote]/develop
 	
+### TIP 
+In order to get a Branch that it's on remote but not in local you have to do the following:
+
+	git fetch origin
+	git checkout --track origin/<remote_branch_name>
+	
 ###2.3 Local vs Remote-local Branches
 	
 When you use the fetch command the changes will be on your **remote-local branches** that will differs from your **local branches**. 
