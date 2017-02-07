@@ -85,7 +85,7 @@ ej.
 
 >Usually, **origin** and **upstream** will be common names that you would use to configure your remote repositories. 
 
-###2.2 Commit
+###2.2 Commit and Push
 
 In order to do a commit and finally push local changes (branch) to your remote repository, you have to use the command **push**. This command will upload the commited changes of your current bracnh. The remote repository will be the new remote repository you added in previuos step (**upstream**). The main steps to perform this opeartion are:
 
@@ -96,10 +96,11 @@ In order to do a commit and finally push local changes (branch) to your remote r
 	
 >ej.	git push upstream develop
 
-
 The following command can be also used to push data to the remote upstream:
 
 	git push -u origin master
+	
+> This command pushes marys-feature to the central repository (origin), and the -u flag adds it as a remote tracking branch. After setting up the tracking branch, Mary can call git push without any parameters to push her feature.
 
 Is the same as:
 
