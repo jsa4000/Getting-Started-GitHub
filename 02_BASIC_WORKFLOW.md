@@ -3,7 +3,7 @@
 
 In this document, I will describe the basic procedure working with a distributed repository like GitHub, dealing with respositories, branches, update, commits, etc.. These guidelines will depend on the type of project and number of people you are working with.
 
-##Git Repository
+##1. Git Repository
 
 ![alt text](http://git-scm.com/figures/18333fig0106-tn.png "Git Local Workflow")
 
@@ -27,11 +27,6 @@ The basic Git workflow goes something like this:
 		git commit -m "Some message"
 
 If a particular version of a file is in the Git directory, it’s considered committed. If it has been modified and was added to the staging area, it is staged. And if it was changed since it was checked out but has not been staged, it is modified. In Git Basics, you’ll learn more about these states and how you can either take advantage of them or skip the staged part entirely.
-
-##1. Basic Workflow
-
-The basic workflow is the following.
-
 
 ##2. Branches
 
