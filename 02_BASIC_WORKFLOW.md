@@ -140,7 +140,12 @@ The fetch command is going to copy the changes into a temporary **local remote-b
 
 ![alt text](https://git-scm.com/book/en/v2/images/remote-branches-1.png "Git Local/Remote Bracnhes")
 	
-	
+###2.5 Tagging
+
+It's recommended to create tags for software releases. this is a known concept, which also exists in SVN. You can create a new tag named 1.0.0 by executing
+	git tag 1.0.0 1b2e1d63ff
+
+>the 1b2e1d63ff stands for the first 10 characters of the commit id you want to reference with your tag. You can get the commit id by looking at the... 
 
 ##3. Advanced Workflows 
 
