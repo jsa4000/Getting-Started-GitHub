@@ -97,7 +97,7 @@ In order to do a commit and finally push local changes (branch) to your remote r
 >ej.	git push upstream develop
 
 
-Following command can be also used to puch information to the remote upstream:
+The following command can be also used to push data to the remote upstream:
 
 	git push -u origin master
 
