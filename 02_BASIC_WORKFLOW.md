@@ -3,7 +3,7 @@
 
 In this document, I will describe the basic procedure working with a distributed repository like GitHub, dealing with respositories, branches, update, commits, etc.. These guidelines will depend on the type of project and number of people you are working with.
 
-##1.Git Repository
+##Git Repository
 
 ![alt text](http://git-scm.com/figures/18333fig0106-tn.png "Git Local Workflow")
 
@@ -27,6 +27,10 @@ The basic Git workflow goes something like this:
 		git commit -m "Some message"
 
 If a particular version of a file is in the Git directory, it’s considered committed. If it has been modified and was added to the staging area, it is staged. And if it was changed since it was checked out but has not been staged, it is modified. In Git Basics, you’ll learn more about these states and how you can either take advantage of them or skip the staged part entirely.
+
+##1. Basic Workflow
+
+The basic workflow is the following.
 
 
 ##2. Branches
@@ -81,7 +85,7 @@ ej.
 
 >Usually, **origin** and **upstream** will be common names that you would use to configure your remote repositories. 
 
-###2.2 Update
+###2.2 Commit
 
 In order to do a commit from your local branch to your remote repositry, you have to use the command **push**. This command will upload your changes from your current commit. The remote repository that you would use is the new remote repository you added in previuos step (**upstream**). The main steps to perform this opeartion are:
 
@@ -99,14 +103,29 @@ Update your branch when the original branch from official repository has been up
 Then you need to apply to merge changes, if your branch is derivated from develop you need to do :
 
 	git merge [name_of_your_remote]/develop
-	
-### TIP 
+
+###2.3 Update
+
 In order to get a Branch that it's on remote but not in local you have to do the following:
 
 	git fetch origin
 	git checkout --track origin/<remote_branch_name>
 	
-###2.3 Local vs Remote-local Branches
+###2.4 Delete
+
+The final step, will be the removal of the branch on your **local** filesystem :
+
+	git branch -d [name_of_your_new_branch]
+
+To force the deletion of a local branch, use instead _"-D"_ :
+
+	git branch -D [name_of_your_new_branch]
+
+Finally, delete the branch on **GitHub** :
+
+	git push origin :[name_of_your_new_branch]
+	
+###2.4 Local vs Remote-local Branches
 	
 When you use the fetch command the changes will be on your **remote-local branches** that will differs from your **local branches**. 
 
@@ -120,22 +139,8 @@ The fetch command is going to copy the changes into a temporary **local remote-b
 	git merge origin/develop
 
 ![alt text](https://git-scm.com/book/en/v2/images/remote-branches-1.png "Git Local/Remote Bracnhes")
-
-
-###2.3 Delete
-
-The final step, will be the removal of the branch on your **local** filesystem :
-
-	git branch -d [name_of_your_new_branch]
-
-To force the deletion of a local branch, use instead _"-D"_ :
-
-	git branch -D [name_of_your_new_branch]
-
-Finally, delete the branch on **GitHub** :
-
-	git push origin :[name_of_your_new_branch]
-
+	
+	
 
 ##3. Advanced Workflows 
 
@@ -200,8 +205,17 @@ There are two ways to update the current branch with another, this update doesn'
 	
 			git pull --rebase
 	
+	
+##4. Rules for the Road
 
-##4. References
+>- Keep the master branch clean. That should be ready to go live if necessary. This means tests should be passing, everything compiles, nothing important should be broken, etc.
+>- Never commit directly to upstream. Upstream should only be updated through Pull Requests. Exception: pushing tags.
+>- Pull from upstream regularly. The more codebases diverge, the more likely a nasty merge problem will occur.
+>- Keep branches small. Just reiterating it again.
+>- There are exceptions to every rule. Use them intelligently.
+
+	
+##5. References
 
 - https://juristr.com/blog/2013/04/git-explained/
 - http://rogerdudler.github.io/git-guide/
