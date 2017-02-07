@@ -96,6 +96,18 @@ In order to do a commit and finally push local changes (branch) to your remote r
 	
 >ej.	git push upstream develop
 
+
+Following command can be also used to puch information to the remote upstream:
+
+	git push -u origin master
+
+Is the same as:
+
+	git push origin master 
+	git branch --set-upstream master origin/master
+
+###2.3 Update
+
 Update your branch when the original branch from official repository has been updated :
 
 	git fetch [name_of_your_remote]
@@ -103,8 +115,6 @@ Update your branch when the original branch from official repository has been up
 Then you need to apply to merge changes, if your branch is derivated from develop you need to do :
 
 	git merge [name_of_your_remote]/develop
-
-###2.3 Update
 
 In order to get a Branch that it's on remote but not in local you have to do the following:
 
