@@ -52,6 +52,11 @@ This is used when a modification need to be done for previous commit.
 Git will prompt the committed changes and the previous comment, so it can be modified if needed.
 Type *":wq"* to write and quit. This is a command from vi.
 
+By the way, if you want to revert your changes to the last time you fetched data from remote, you have to do the following:
+
+	git fetch origin
+	git reset --hard origin/master
+
 ###4 Reset the repository.
 
 This is used to revert the repository to a certain commit. (Similar to a Restore point)
