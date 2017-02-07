@@ -3,7 +3,7 @@
 
 In this document, I will describe the basic procedure working with a distributed repository like GitHub, dealing with respositories, branches, update, commits, etc.. These guidelines will depend on the type of project and number of people you are working with.
 
-##1. Git Repository
+##1. Repository
 
 ![alt text](http://git-scm.com/figures/18333fig0106-tn.png "Git Local Workflow")
 
