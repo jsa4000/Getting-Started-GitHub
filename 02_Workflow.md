@@ -56,6 +56,22 @@ Firstly, create a branch on your local machine and switch to it. There are sever
 Secondly, push the branch onto GitHub. (_In order to commit something in your branch, be sure to be inside_).
 
 	git push origin [name_of_your_new_branch]
+	
+	
+This will give you the following error:
+
+	javier.santos@essp-cnu40392pk MINGW64 /c/jsantos/Projects/GitHub/Getting-Started-NodeJS (master)
+	$ git checkout -b FirstVersion
+	Switched to a new branch 'FirstVersion'
+
+	javier.santos@essp-cnu40392pk MINGW64 /c/jsantos/Projects/GitHub/Getting-Started-NodeJS (FirstVersion)
+	$ git push origin
+	fatal: The current branch FirstVersion has no upstream branch.
+	To push the current branch and set the remote as upstream, use
+
+So in order to push the content of a branch that does't exist in remote (upstream) you have tu type the following command
+
+    git push --set-upstream origin FirstVersion
 
 
 You can see all branches created by using :
