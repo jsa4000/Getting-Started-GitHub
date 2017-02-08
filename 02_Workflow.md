@@ -57,7 +57,7 @@ Secondly, push the branch onto GitHub. (_In order to commit something in your br
 
 	git push origin [name_of_your_new_branch]
 	
-	
+*************************	
 If you don't specify the name of the new branch, but you are inside the branch. This will give you the following error:
 
 	javier.santos@essp-cnu40392pk MINGW64 /c/jsantos/Projects/GitHub/Getting-Started-NodeJS (master)
@@ -72,6 +72,8 @@ If you don't specify the name of the new branch, but you are inside the branch. 
 So in order to push the content of a branch that does't exist in remote (upstream) you have tu type the following command
 
     git push --set-upstream origin FirstVersion
+    
+*************************  
 
 You can see all branches created by using :
 
