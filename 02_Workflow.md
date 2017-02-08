@@ -44,11 +44,11 @@ When you do a **pull request** on a branch, you can continue to work on another 
 
 Firstly, create a branch on your local machine and switch to it. There are several ways to create them:
 
-- New way, that automatically creates a branch and do the checkout:
+- **New way** that automatically creates a branch and do the checkout:
 
 		git checkout -b [name_of_your_new_branch]
 	
-- Old way, that you have to create a branch and finally do the checkout:
+- **Old way** that you have to create a branch and finally do the checkout:
 
  		git branch [name_of_your_new_branch]
  		git checkout newbranch
@@ -58,7 +58,7 @@ Secondly, push the branch onto GitHub. (_In order to commit something in your br
 	git push origin [name_of_your_new_branch]
 	
 	
-This will give you the following error:
+If you don't specify the name of the new branch, but you are inside the branch. This will give you the following error:
 
 	javier.santos@essp-cnu40392pk MINGW64 /c/jsantos/Projects/GitHub/Getting-Started-NodeJS (master)
 	$ git checkout -b FirstVersion
@@ -73,18 +73,15 @@ So in order to push the content of a branch that does't exist in remote (upstrea
 
     git push --set-upstream origin FirstVersion
 
-
 You can see all branches created by using :
 
 	git branch
 
  Which will show :
 
-  >	approval_messages
-  
-  > 	master
-  
-  > 	master_clean
+  >approval_messages
+  >master
+  >master_clean
 
 Finally, **add** a new **remote repositoty** to your new branch. This remote repository will be used to fetch (_update_) or commit (_pull-request_) depending on your needs.
 
