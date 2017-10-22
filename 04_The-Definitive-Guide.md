@@ -271,39 +271,49 @@ Finally, when all chanes have beend implemented and tested, push and merge the c
 
 ## 8.Tags
 
-Tags are just **labels** that points to the **previous** commit. This tags can be used to label **releases** or some **points** in the development to be remembered.
+Tags are just **labels** that points to the **previous** commit perfomed. Tags can be used to label **releases** or some **hints** during the development of the project.
 
-> Tags can be seen as a **new** commit since it's performed after the commit of the release. This tag will point to this last commit, so this cannot be changed. Be sure to tag the version or release after merging the changes with the master branch and after the Testing.
+> Tag can be seen as a **named** hash-key and it's usually performed after finishing a **particular** commit. Each tag is attached to the last commit (by hash-key) and **cannot** be changed. Be sure to use **tag** after merging the changes with the **master** or **release** branch.
 
-A tag can be **created** using two similar ways. The second way it's also called **annotated way**
+### 8.1 Create Tags
+
+A tag can be **created** using two similar ways. The second way it's also called **annotated way** because add more information about the tag.
 
     git tag v1.0.0
     git tag -a v1.0.0 -m "Message for the current release"
 
-All tags can be listed using the following commands
+> In this case the tag v1.0.0 is attached to the last commit. So instead accesing to that commit (log) using its **hash-key**, it can be used the **tag** instead. i.e. git checkout v1.0.0
+
+Tags that exists in a particular branch can be listed using the following commands:
 
     git tag
-    git tag -l "v1.*"
-    git show v1.0.0
+    git tag -l "v1.*"  # Regular expresion
+    git show v1.0.0    # It shows information about that particular log.
 
-Once the tag (or tags) has been created, it is needed to **push** into the remote repository using:
+Finally, once all **tags** has been created for the last commit, it is also needed to **push** the **tags** into the remote repository using:
 
-    git push origin v1.0.0
-    git push origin --tags
+    git push origin v1.0.0   # Only a specific tag
+    git push origin --tags   # All the tags created
 
-To **delete** tags **locally**, use the following command:
+### 8.2 Delete Tags
+
+In order to **delete** tags, it will depend on the repository **local** or **remote**.
+
+- **Local** repository:
 
     git tag -d v1.0.0
 
-To **delete** tags in the **remote** repository is similar as branches, since both are just **pointer** to a commit.
+- **Remote** repository:
 
     git push origin -d v1.0.0
 
+### 8.3 Common Workflow
 
- A simple workflow could be the following
+There are **strategies** or **good practices** used in Git for the correct **versioning** of the releases. Following there is one example:
 
+    
 
-    git
+    
 
 ## 9. Forks
 
