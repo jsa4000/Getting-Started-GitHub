@@ -1,25 +1,25 @@
 #  Getting Started into GitHub
 
-##1. Overview
+## Overview
 
 This repository is intended to go through different **Workflows** and **Tips** working with Git. Aslo, we will be using **Github** for Git remote repository.
  
-##2. Differences between Git and GitHub
+## Differences between Git and GitHub
 
 First at all, we are going to talk about the main differences between Git and GitHub, since both are misunderstood for some people.
 	
-###2.1. Git
+### Git
 
 >"Git is a free and **open source distributed version control system** designed to handle everything from small to very large projects with speed and efficiency"
 	
 Git is a distributed peer-peer version control system. Each node in the network is a **peer**, storing entire repositories which can also act as a multi-node distributed **back-ups**. There is no specific concept of a central server although nodes can be head-less or 'bare', taking on a role similar to the central server in centralised version control systems.
 
 	
-###2.2. GitHub
+### GitHub
 			
 >"Github provides access control and several collaboration features such as wikis, task management, and bug tracking and feature requests for every project.
 	
-##3. Git Explained	
+## Git Explained	
 	
 >*NOTE:* Following explanation has been extracted from the following link: https://juristr.com/blog/2013/04/git-explained/
 	
@@ -30,7 +30,7 @@ Git repository should be seen from the point of view of the tree it constructs.
 
 ![alt text](http://git-scm.com/figures/18333fig0106-tn.png "Git Local Workflow")
 
-##4. Terminology
+## Terminology
 
 - **master**: the repository’s main branch. Depending on the work flow it is the one people work on or the one where the integration happens
 - **clone**: copies an existing git repository, normally from some remote location to your local environment.
